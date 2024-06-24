@@ -17,13 +17,13 @@ const NavBarLink: React.FC<NarBarLinkProps> = ({
     <>
       <Link
         href={href}
-        className={`block text-sm text-gray-600 hover:text-gray-300 relative ${
-          showUnderline ? "hover:underline-blue" : ""
+        className={`block font-bold text-sm text-gray-600 hover:text-gray-400 relative ${
+          showUnderline ? "hover:underline-green" : ""
         }`}
       >
         {text}
         {showUnderline && (
-          <span className="absolute inset-x-0 bottom-0 h-1 bg-blue-500 underline-blue"></span>
+          <span className="-my-2 absolute inset-x-0 bottom-0 h-0.5 bg-green-800 underline-green"></span>
         )}
       </Link>
     </>

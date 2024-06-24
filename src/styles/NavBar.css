@@ -1,17 +1,12 @@
 /* styles/NavBar.css */
-.underline-blue {
+.underline-green {
     transition-property: width, transform;
     transition-duration: 0.2s;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transform-origin: right;
     transform: scaleX(0);
   }
-  
-  .hover\:text-gray-300:hover {
-    color: #1a202c;
-  }
-  
-  .hover\:underline-blue:hover .underline-blue {
+  .hover\:underline-green:hover .underline-green {
     transform: scaleX(1);
   }
   

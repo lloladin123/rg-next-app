@@ -1,5 +1,9 @@
-import Image from "next/image";
-
 export default function Home() {
-  return <p>hi</p>;
+  return (
+    <>
+      <video controls={false} autoPlay muted loop width="100%">
+        <source src="/videos/RgHeroFilm.mp4" type="video/mp4" />
+      </video>
+    </>
+  );
 }

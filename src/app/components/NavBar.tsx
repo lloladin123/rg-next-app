@@ -1,7 +1,7 @@
-import Link from "next/link";
 import React from "react";
 import NavBarLink from "./NavBarLink";
 import NavBarDropdown from "./NavBarDropdown";
+import NavBarDropdownItem from "./NavBarDropdownItem";
 
 const NavBar = () => {
   return (
@@ -14,13 +14,13 @@ const NavBar = () => {
           <li>
             <NavBarDropdown
               items={[
-                <NavBarLink
-                  showUnderline={false}
+                <NavBarDropdownItem
+                  key="holdtilmedling"
                   href="/"
                   text={"Holdtilmedling".toUpperCase()}
                 />,
-                <NavBarLink
-                  showUnderline={false}
+                <NavBarDropdownItem
+                  key="events"
                   href="/"
                   text={"Events".toUpperCase()}
                 />,
@@ -31,18 +31,18 @@ const NavBar = () => {
           <li>
             <NavBarDropdown
               items={[
-                <NavBarLink
-                  showUnderline={false}
+                <NavBarDropdownItem
+                  key="kontaktpersoner"
                   href="/"
                   text={"Kontaktpersoner".toUpperCase()}
                 />,
-                <NavBarLink
-                  showUnderline={false}
+                <NavBarDropdownItem
+                  key="udvalg"
                   href="/"
                   text={"Udvalg".toUpperCase()}
                 />,
-                <NavBarLink
-                  showUnderline={false}
+                <NavBarDropdownItem
+                  key="bestyrelse og instruktører"
                   href="/"
                   text={"Bestyrelse og Instruktører".toUpperCase()}
                 />,
@@ -53,28 +53,28 @@ const NavBar = () => {
           <li>
             <NavBarDropdown
               items={[
-                <NavBarLink
-                  showUnderline={false}
+                <NavBarDropdownItem
+                  key="ferier"
                   href="/"
                   text={"Ferier".toUpperCase()}
                 />,
-                <NavBarLink
-                  showUnderline={false}
+                <NavBarDropdownItem
+                  key="vedtægter"
                   href="/"
                   text={"Vedtægter".toUpperCase()}
                 />,
-                <NavBarLink
-                  showUnderline={false}
+                <NavBarDropdownItem
+                  key="referater og årsrapperter"
                   href="/"
                   text={"Referater & Årsrapporter".toUpperCase()}
                 />,
-                <NavBarLink
-                  showUnderline={false}
+                <NavBarDropdownItem
+                  key="vedtægter"
                   href="/"
                   text={"Vedtægter".toUpperCase()}
                 />,
-                <NavBarLink
-                  showUnderline={false}
+                <NavBarDropdownItem
+                  key="omRG"
                   href="/"
                   text={"Om Roskilde Gymnastikforening".toUpperCase()}
                 />,
@@ -85,8 +85,8 @@ const NavBar = () => {
           <li>
             <NavBarDropdown
               items={[
-                <NavBarLink
-                  showUnderline={false}
+                <NavBarDropdownItem
+                  key="billeder"
                   href="/"
                   text={"Billeder".toUpperCase()}
                 />,
