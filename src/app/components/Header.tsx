@@ -13,7 +13,7 @@ const Header = () => {
             src={LogoImage}
             className="absolute rounded-full hover:opacity-75 transition-opacity duration-300"
             alt="RgLogo"
-            style={{ width: "120px", height: "auto" }}
+            style={{ width: "110px", height: "auto" }}
           />
         </Link>
       </div>

@@ -40,7 +40,7 @@ const NavBarDropdown: React.FC<NavBarDropownProps> = ({ text, items }) => {
   return (
     <div className="relative">
       <button
-        className="text-gray-600 text-sm font-bold hover:text-gray-300 flex items-center hover:underline-green font-sans"
+        className="text-gray-600 font-semibold text-sm hover:text-gray-500 flex items-center hover:underline-green font-sans"
         onClick={toggleDropdown}
       >
         <span>{text}</span>
