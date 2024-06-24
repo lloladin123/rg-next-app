@@ -40,21 +40,25 @@ const NavBarDropdown: React.FC<NavBarDropownProps> = ({ text, items }) => {
   return (
     <div className="relative">
       <button
-        className="hover:bg-gray-700 hover:text-white flex items-center hover:underline-blue"
+        className="text-gray-600 text-sm hover:text-gray-300 flex items-center hover:underline-blue font-sans"
         onClick={toggleDropdown}
       >
         <span>{text}</span>
-        <IoIosArrowDown />
+        <div className="font-bold text-black">
+          <IoIosArrowDown />
+        </div>
         <span className="absolute inset-x-0 bottom-0 h-1 bg-blue-500 underline-blue"></span>{" "}
       </button>
 
       {isOpen && (
         <div
-          className="absolute z-10 bg-gray-800 text-gray-300 w-40 mt-2 rounded-md shadow-lg"
+          className="absolute z-10 bg-white w-80 mt-2 rounded-md shadow-lg flex flex-col items-center"
           ref={dropdownRef}
         >
           {items.map((item, index) => (
-            <div key={index}>{item}</div> // Render each item received from parent
+            <div className="my-2 text-left w-full px-4" key={index}>
+              {item}
+            </div> // Render each item received from parent
           ))}
         </div>
       )}

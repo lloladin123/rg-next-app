@@ -6,8 +6,8 @@ import NavBarDropdown from "./NavBarDropdown";
 const NavBar = () => {
   return (
     <>
-      <nav>
-        <ul className="flex space-x-4 py-4 px-8">
+      <nav className="">
+        <ul className="flex space-x-2 py-4 px-8">
           <li>
             <NavBarLink href="/" text={"Forside".toUpperCase()} />
           </li>
@@ -91,7 +91,7 @@ const NavBar = () => {
                   text={"Billeder".toUpperCase()}
                 />,
               ]}
-              text="Billeder og Videor"
+              text={"Billeder og Videor".toUpperCase()}
             ></NavBarDropdown>
           </li>
           <li>

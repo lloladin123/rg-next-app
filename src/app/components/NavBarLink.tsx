@@ -17,7 +17,7 @@ const NavBarLink: React.FC<NarBarLinkProps> = ({
     <>
       <Link
         href={href}
-        className={`block hover:text-gray-300 relative ${
+        className={`block text-sm text-gray-600 hover:text-gray-300 relative ${
           showUnderline ? "hover:underline-blue" : ""
         }`}
       >
