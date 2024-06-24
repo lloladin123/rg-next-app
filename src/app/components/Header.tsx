@@ -39,7 +39,7 @@ const Header = () => {
         </Link>
       </div>
       {isMobile ? null : (
-        <div className="flex justify-center items-center ml-20 sm:ml-30 md:ml-40 lg:ml-60">
+        <div className="flex justify-center items-center ml-20 sm:ml-20 md:ml-20 lg:ml-40">
           <NavBar></NavBar>
         </div>
       )}
