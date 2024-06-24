@@ -7,7 +7,7 @@ const NavBar = () => {
   return (
     <>
       <nav className="">
-        <ul className="flex space-x-2 py-4 px-8">
+        <ul className="flex space-x-3 py-4 px-8">
           <li>
             <NavBarLink href="/" text={"Forside".toUpperCase()} />
           </li>
