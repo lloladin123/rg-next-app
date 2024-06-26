@@ -7,6 +7,7 @@ import { MdArrowForwardIos } from "react-icons/md";
 import "../styles/page.css";
 import FacebookTimeLine from "./components/FacebookTimeLine";
 import HoneycombPattern from "./components/HoneycombPattern";
+import IntroBox from "./components/IntroBox";
 
 export default function Home() {
   const today = new Date();
@@ -86,6 +87,8 @@ export default function Home() {
           </Link>
         </div>
       </HoneycombPattern>
+
+      <IntroBox />
     </>
   );
 }
