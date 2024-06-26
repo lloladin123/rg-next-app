@@ -4,6 +4,7 @@ import Link from "next/link";
 import DateIcon from "./components/DateIcon";
 import "../styles/page.css";
 import FacebookTimeLine from "./components/FacebookTimeLine";
+import HoneycombPattern from "./components/HoneycombPattern";
 
 export default function Home() {
   const today = new Date();
@@ -13,7 +14,7 @@ export default function Home() {
         <source src="/videos/RgHeroFilm.mp4" type="video/mp4" />
       </video>
       <div className="flex flex-col sm:flex-row bg-white justify-between p-4 space-x-4">
-        <div className="flex-1 text-gray-900 p-6">
+        <div className="lg:flex-1 text-gray-900 p-6">
           <h1 className="text-xl font-bold mb-4">Nyheder</h1>
           <Link
             href="/"
@@ -42,7 +43,7 @@ export default function Home() {
             <p className="text-blue-400">Læs mere...</p>
           </Link>
         </div>
-        <div className="flex-1 text-gray-900 p-6">
+        <div className="lg:flex-1 text-gray-900 p-6">
           <h1 className="text-xl font-bold mb-4">Arrangementer</h1>
           <Link
             href="/"
@@ -65,11 +66,12 @@ export default function Home() {
             </div>
           </Link>
         </div>
-        <div className="flex-1 text-gray-900 p-6">
+        <div className="lg:flex-1 text-gray-900 p-6">
           <h1 className="text-xl font-bold mb-4">Facebook</h1>
           <FacebookTimeLine />
         </div>
       </div>
+      <HoneycombPattern />
     </>
   );
 }

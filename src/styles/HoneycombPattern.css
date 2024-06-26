@@ -1,0 +1,19 @@
+/* HoneycombPattern.css */
+
+.container {
+    background-color: #1e6873;
+    width: 100%; /* Adjust width as needed */
+    height: 25vh; /* Adjust height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .honeycombBackground {
+    width: 100%; /* Full width of container */
+    height: 100%; /* Full height of container */
+    background-image: url('../images/honeycombPattern.png'); /* Replace with correct path */
+    background-repeat: repeat; /* Repeat the pattern */
+    background-size: auto 40px; /* Auto width (to maintain aspect ratio) and fixed height */
+  }
+  
