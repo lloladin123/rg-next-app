@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import DateIcon from "./components/DateIcon";
+import { MdArrowForwardIos } from "react-icons/md";
+
 import "../styles/page.css";
 import FacebookTimeLine from "./components/FacebookTimeLine";
 import HoneycombPattern from "./components/HoneycombPattern";
@@ -71,7 +73,19 @@ export default function Home() {
           <FacebookTimeLine />
         </div>
       </div>
-      <HoneycombPattern />
+      <HoneycombPattern>
+        <div className="flex flex-col justify-center items-center h-full text-center">
+          <h1 className="text-2xl text-white font-bold mb-4">
+            Bliv medlem af Roskilde Gymnastikforening i dag
+          </h1>
+          <Link
+            href="/"
+            className="hover:text-blue-400 flex items-center space-x-1"
+          >
+            Gå til tilmedling <MdArrowForwardIos color="white" />
+          </Link>
+        </div>
+      </HoneycombPattern>
     </>
   );
 }
