@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import DateIcon from "./components/DateIcon";
 import "../styles/page.css";
@@ -10,7 +12,7 @@ export default function Home() {
       <video controls={false} autoPlay muted loop width="100%">
         <source src="/videos/RgHeroFilm.mp4" type="video/mp4" />
       </video>
-      <div className="flex bg-white justify-between p-4 space-x-4">
+      <div className="flex flex-col sm:flex-row bg-white justify-between p-4 space-x-4">
         <div className="flex-1 text-gray-900 p-6">
           <h1 className="text-xl font-bold mb-4">Nyheder</h1>
           <Link
