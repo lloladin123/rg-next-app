@@ -1,6 +1,7 @@
 import Link from "next/link";
 import DateIcon from "./components/DateIcon";
 import "../styles/page.css";
+import FacebookTimeLine from "./components/FacebookTimeLine";
 
 export default function Home() {
   const today = new Date();
@@ -11,10 +12,23 @@ export default function Home() {
       </video>
       <div className="flex bg-white justify-between p-4 space-x-4">
         <div className="flex-1 text-gray-900 p-6">
-          <h1 className="text-xl font-bold mb-4 mx-4">Nyheder</h1>
+          <h1 className="text-xl font-bold mb-4">Nyheder</h1>
           <Link
             href="/"
-            className="block rounded-lg shadow-md p-4 hover-parent"
+            className="block rounded-lg shadow-md p-4 mb-4 hover-parent"
+          >
+            <h2 className="text-lg text-blue-400 font-semibold">
+              Info. om sæson 2024/2025
+            </h2>
+            <p className="mt-2 text-gray-600 text-xs">29-04-2024</p>
+            <p className="mt-1">
+              Kære besøgende på gymnastikforeningens hjemmeside.
+            </p>
+            <p className="text-blue-400">Læs mere...</p>
+          </Link>
+          <Link
+            href="/"
+            className="block rounded-lg shadow-md p-4 mb-4 hover-parent"
           >
             <h2 className="text-lg text-blue-400 font-semibold">
               Info. om sæson 2024/2025
@@ -27,10 +41,20 @@ export default function Home() {
           </Link>
         </div>
         <div className="flex-1 text-gray-900 p-6">
-          <h1 className="text-xl font-bold mb-4 mx-4">Arrangementer</h1>
+          <h1 className="text-xl font-bold mb-4">Arrangementer</h1>
           <Link
             href="/"
-            className="rounded-lg shadow-md p-4 hover-parent flex items-start space-x-4"
+            className="rounded-lg shadow-md p-4 mb-4 hover-parent flex items-start space-x-4"
+          >
+            <DateIcon date={today} />
+            <div className="flex flex-col">
+              <h2 className="text-lg font-semibold">Open Dance Fit</h2>
+              <p className="text-xs text-gray-600">26-06-2024</p>
+            </div>
+          </Link>
+          <Link
+            href="/"
+            className="rounded-lg shadow-md p-4 mb-4 hover-parent flex items-start space-x-4"
           >
             <DateIcon date={today} />
             <div className="flex flex-col">
@@ -41,7 +65,7 @@ export default function Home() {
         </div>
         <div className="flex-1 text-gray-900 p-6">
           <h1 className="text-xl font-bold mb-4">Facebook</h1>
-          <div>interactive preview of a Facebook page</div>
+          <FacebookTimeLine />
         </div>
       </div>
     </>
