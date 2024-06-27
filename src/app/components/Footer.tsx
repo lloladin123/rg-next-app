@@ -1,7 +1,12 @@
 import React from "react";
 import FacebookFooterIcon from "./FacebookFooterIcon";
+import dkLogo from "../../images/dk_logo.png";
+import mastercardLogo from "../../images/mastercard_logo.png";
+import visaElectron from "../../images/visa_electron.jpg";
+import visa from "../../images/visa_logo.jpg";
 import Link from "next/link";
 import GoogleMapsComponent from "./GoogleMapsComponent";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -61,13 +66,18 @@ const Footer = () => {
         </div>
       </div>
       <div
-        className="flex items-center justify-around w-full"
+        className="flex p-2 flex-col md:flex-row items-center justify-around w-full"
         style={{ backgroundColor: "#383838" }}
       >
-        <div className="w-1/4 p-4">
+        <div className="">
           <p>© 2024 Roskilde Gymnastikforening.</p>
         </div>
-        <div className="w-1/4 p-4"></div>
+        <div className="flex flex-row space-x-3">
+          <Image className="w-10" alt="mastercardLogo" src={mastercardLogo} />
+          <Image className="w-10" alt="dkLogo" src={dkLogo} />
+          <Image className="w-10" alt="visaElectronLogo" src={visaElectron} />
+          <Image className="w-10" alt="visaLogo" src={visa} />
+        </div>
       </div>
     </>
   );
