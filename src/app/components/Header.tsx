@@ -8,10 +8,13 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <div className="w-full bg-white" style={{ height: "100px" }}>
+    <div
+      className="w-full bg-white flex justify-between items-center "
+      style={{ height: "100px" }}
+    >
       <div
-        className="fixed w-full bg-white flex justify-between items-center px-4 md:px-8"
-        style={{ height: "80px" }}
+        className="fixed w-full bg-white flex px-4 md:px-8"
+        style={{ height: "100px" }}
       >
         <div
           className="absolute left-4 top-1/2 transform -translate-y-1/2"
