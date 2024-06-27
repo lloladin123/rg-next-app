@@ -64,7 +64,7 @@ const NavBar = () => {
             left: 0, // Ensure it starts from the left edge of the screen
           }}
         >
-          <div className="w-1/2 flex flex-col lg:space-x-3 justify-between lg:space-y-0 lg:flex-row">
+          <div className="w-1/4 flex flex-col lg:space-x-3 justify-between lg:space-y-0 lg:flex-row">
             <li>
               <NavBarLink href="/" text={"Forside".toUpperCase()} />
             </li>
