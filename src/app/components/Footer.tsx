@@ -23,7 +23,7 @@ const Footer = () => {
               <b>
                 <h1 className="relative ml-2 z-10">Kontakt</h1>
               </b>
-              <span className="absolute inset-y-0 left-0 w-0.5 bg-blue-500 z-0"></span>
+              <span className="absolute inset-y-0 left-0 w-0.5 bg-rg-green z-0"></span>
             </div>
             <div className="mt-3 text-sm">
               <p>Roskilde Gymnastikforening</p>
@@ -44,7 +44,7 @@ const Footer = () => {
               <b>
                 <h1 className="relative ml-2 z-10">Links</h1>
               </b>
-              <span className="absolute inset-y-0 left-0 w-0.5 bg-blue-500 z-0"></span>
+              <span className="absolute inset-y-0 left-0 w-0.5 bg-rg-green z-0"></span>
             </div>
             <ul className="mt-2 text-sm list-disc">
               <Link href="/">
