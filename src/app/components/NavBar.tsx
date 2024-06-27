@@ -1,13 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBarLink from "./NavBarLink";
 import NavBarDropdown from "./NavBarDropdown";
 import NavBarDropdownItem from "./NavBarDropdownItem";
+import { FaBars, FaTimes } from "react-icons/fa"; // Import icons for the burger menu
 
 const NavBar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <>
-      <nav className="">
-        <ul className="flex space-x-3 py-4 px-8">
+      <nav className="lg:flex lg:items-center lg:justify-between lg:px-8">
+        <div className="flex justify-between items-center px-4 py-4 lg:py-0 lg:px-0">
+          <div className="text-xl font-bold">Logo</div>
+          <div className="lg:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-800 focus:outline-none"
+            >
+              {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+            </button>
+          </div>
+        </div>
+        <ul
+          className={`lg:mt-0 mt-4 w-full bg-white lg:bg-transparent absolute lg:relative lg:flex lg:items-center lg:space-x-3 lg:py-4 lg:px-8 ${
+            menuOpen ? "block" : "hidden"
+          } lg:block`}
+        >
           <li>
             <NavBarLink href="/" text={"Forside".toUpperCase()} />
           </li>
@@ -26,7 +48,7 @@ const NavBar = () => {
                 />,
               ]}
               text={"Tilmelding".toUpperCase()}
-            ></NavBarDropdown>
+            />
           </li>
           <li>
             <NavBarDropdown
@@ -48,7 +70,7 @@ const NavBar = () => {
                 />,
               ]}
               text={"Kontakt".toUpperCase()}
-            ></NavBarDropdown>
+            />
           </li>
           <li>
             <NavBarDropdown
@@ -80,7 +102,7 @@ const NavBar = () => {
                 />,
               ]}
               text={"Info".toUpperCase()}
-            ></NavBarDropdown>
+            />
           </li>
           <li>
             <NavBarDropdown
@@ -92,7 +114,7 @@ const NavBar = () => {
                 />,
               ]}
               text={"Billeder og Videor".toUpperCase()}
-            ></NavBarDropdown>
+            />
           </li>
           <li>
             <NavBarLink href="/" text={"Roskilde Festival".toUpperCase()} />
