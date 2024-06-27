@@ -6,10 +6,13 @@ import GoogleMapsComponent from "./GoogleMapsComponent";
 const Footer = () => {
   return (
     <>
-      <div className="flex w-full p-8" style={{ backgroundColor: "#222" }}>
-        <div className="w-1/2 flex flex-row justify-around">
+      <div
+        className="flex flex-col w-full md:flex-row p-8"
+        style={{ backgroundColor: "#222" }}
+      >
+        <div className="md:w-1/2 w-full flex flex-col md:flex-row justify-around">
           {/* Box 1 */}
-          <div className="w-70 p-4 flex flex-col">
+          <div className="p-4 flex flex-col">
             <div className="relative">
               <b>
                 <h1 className="relative ml-2 z-10">Kontakt</h1>
@@ -29,7 +32,7 @@ const Footer = () => {
           </div>
 
           {/* Box 2 */}
-          <div className="w-70 p-4 flex flex-col">
+          <div className="p-4 flex flex-col">
             <div className="relative">
               <b>
                 <h1 className="relative ml-2 z-10">Links</h1>
@@ -50,9 +53,9 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="w-1/2">
+        <div className="md:w-1/2 w-full">
           {/* Box 3 */}
-          <div className="w-70 p-4 flex">
+          <div className="p-4 flex">
             <GoogleMapsComponent />
           </div>
         </div>
