@@ -23,9 +23,11 @@ const labelStyle: CSSProperties = {
   transform: "translateX(-50%)", // Center the label horizontally
 };
 
+const googleMapsApiKey: string = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!;
+
 const GoogleMapsComponent = () => {
   return (
-    <LoadScript googleMapsApiKey="AIzaSyBYy-NmXzU-Fri-iO6w8gZmvp6gkx2Odl4">
+    <LoadScript googleMapsApiKey={googleMapsApiKey}>
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={13}>
         <Marker position={center} />
         <div
