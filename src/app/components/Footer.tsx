@@ -7,6 +7,7 @@ import visa from "../../images/visa_logo.jpg";
 import Link from "next/link";
 import GoogleMapsComponent from "./GoogleMapsComponent";
 import Image from "next/image";
+import InstagramFooterIcon from "./InstagramFooterIcon";
 
 const Footer = () => {
   return (
@@ -31,8 +32,9 @@ const Footer = () => {
               <p>E-mail: kontakt@roskildegf.dk</p>
               <p>CVR: 22583514</p>
             </div>
-            <div className="mt-4">
+            <div className="mt-4 flex flex row space-x-2 items-center">
               <FacebookFooterIcon />
+              <InstagramFooterIcon />
             </div>
           </div>
 
