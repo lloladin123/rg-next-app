@@ -26,105 +26,109 @@ const NavBar = () => {
           </div>
         </div>
         <ul
-          className={`lg:mt-0 mt-4 w-full bg-white lg:bg-transparent absolute lg:relative lg:flex lg:items-center lg:space-x-3 lg:py-4 lg:px-8 ${
+          className={`lg:mt-0 mt-4 p-16 bg-white absolute lg:relative lg:flex flex justify-between flex-row lg:items-center lg:py-4 lg:px-8 ${
             menuOpen ? "block" : "hidden"
-          } lg:block`}
+          } lg:block bg-white w-full p-8`}
         >
-          <li>
-            <NavBarLink href="/" text={"Forside".toUpperCase()} />
-          </li>
-          <li>
-            <NavBarDropdown
-              items={[
-                <NavBarDropdownItem
-                  key="holdtilmedling"
-                  href="/"
-                  text={"Holdtilmedling".toUpperCase()}
-                />,
-                <NavBarDropdownItem
-                  key="events"
-                  href="/"
-                  text={"Events".toUpperCase()}
-                />,
-              ]}
-              text={"Tilmelding".toUpperCase()}
-            />
-          </li>
-          <li>
-            <NavBarDropdown
-              items={[
-                <NavBarDropdownItem
-                  key="kontaktpersoner"
-                  href="/"
-                  text={"Kontaktpersoner".toUpperCase()}
-                />,
-                <NavBarDropdownItem
-                  key="udvalg"
-                  href="/"
-                  text={"Udvalg".toUpperCase()}
-                />,
-                <NavBarDropdownItem
-                  key="bestyrelse og instruktører"
-                  href="/"
-                  text={"Bestyrelse og Instruktører".toUpperCase()}
-                />,
-              ]}
-              text={"Kontakt".toUpperCase()}
-            />
-          </li>
-          <li>
-            <NavBarDropdown
-              items={[
-                <NavBarDropdownItem
-                  key="ferier"
-                  href="/"
-                  text={"Ferier".toUpperCase()}
-                />,
-                <NavBarDropdownItem
-                  key="vedtægter"
-                  href="/"
-                  text={"Vedtægter".toUpperCase()}
-                />,
-                <NavBarDropdownItem
-                  key="referater og årsrapperter"
-                  href="/"
-                  text={"Referater & Årsrapporter".toUpperCase()}
-                />,
-                <NavBarDropdownItem
-                  key="vedtægter"
-                  href="/"
-                  text={"Vedtægter".toUpperCase()}
-                />,
-                <NavBarDropdownItem
-                  key="omRG"
-                  href="/"
-                  text={"Om Roskilde Gymnastikforening".toUpperCase()}
-                />,
-              ]}
-              text={"Info".toUpperCase()}
-            />
-          </li>
-          <li>
-            <NavBarDropdown
-              items={[
-                <NavBarDropdownItem
-                  key="billeder"
-                  href="/"
-                  text={"Billeder".toUpperCase()}
-                />,
-              ]}
-              text={"Billeder og Videor".toUpperCase()}
-            />
-          </li>
-          <li>
-            <NavBarLink href="/" text={"Roskilde Festival".toUpperCase()} />
-          </li>
-          <li>
-            <NavBarLink href="/" text={"Opret Profil".toUpperCase()} />
-          </li>
-          <li>
-            <NavBarLink href="/" text={"Login".toUpperCase()} />
-          </li>
+          <div className="flex flex-col lg:space-x-3 space-y-8 lg:space-y-0 lg:flex-row">
+            <li>
+              <NavBarLink href="/" text={"Forside".toUpperCase()} />
+            </li>
+            <li>
+              <NavBarDropdown
+                items={[
+                  <NavBarDropdownItem
+                    key="holdtilmedling"
+                    href="/"
+                    text={"Holdtilmedling".toUpperCase()}
+                  />,
+                  <NavBarDropdownItem
+                    key="events"
+                    href="/"
+                    text={"Events".toUpperCase()}
+                  />,
+                ]}
+                text={"Tilmelding".toUpperCase()}
+              />
+            </li>
+            <li>
+              <NavBarDropdown
+                items={[
+                  <NavBarDropdownItem
+                    key="kontaktpersoner"
+                    href="/"
+                    text={"Kontaktpersoner".toUpperCase()}
+                  />,
+                  <NavBarDropdownItem
+                    key="udvalg"
+                    href="/"
+                    text={"Udvalg".toUpperCase()}
+                  />,
+                  <NavBarDropdownItem
+                    key="bestyrelse og instruktører"
+                    href="/"
+                    text={"Bestyrelse og Instruktører".toUpperCase()}
+                  />,
+                ]}
+                text={"Kontakt".toUpperCase()}
+              />
+            </li>
+            <li>
+              <NavBarDropdown
+                items={[
+                  <NavBarDropdownItem
+                    key="ferier"
+                    href="/"
+                    text={"Ferier".toUpperCase()}
+                  />,
+                  <NavBarDropdownItem
+                    key="vedtægter"
+                    href="/"
+                    text={"Vedtægter".toUpperCase()}
+                  />,
+                  <NavBarDropdownItem
+                    key="referater og årsrapperter"
+                    href="/"
+                    text={"Referater & Årsrapporter".toUpperCase()}
+                  />,
+                  <NavBarDropdownItem
+                    key="vedtægter"
+                    href="/"
+                    text={"Vedtægter".toUpperCase()}
+                  />,
+                  <NavBarDropdownItem
+                    key="omRG"
+                    href="/"
+                    text={"Om Roskilde Gymnastikforening".toUpperCase()}
+                  />,
+                ]}
+                text={"Info".toUpperCase()}
+              />
+            </li>
+          </div>
+          <div className="flex flex-col lg:space-x-3 space-y-8 lg:space-y-0 lg:flex-row">
+            <li>
+              <NavBarDropdown
+                items={[
+                  <NavBarDropdownItem
+                    key="billeder"
+                    href="/"
+                    text={"Billeder".toUpperCase()}
+                  />,
+                ]}
+                text={"Billeder og Videor".toUpperCase()}
+              />
+            </li>
+            <li>
+              <NavBarLink href="/" text={"Roskilde Festival".toUpperCase()} />
+            </li>
+            <li>
+              <NavBarLink href="/" text={"Opret Profil".toUpperCase()} />
+            </li>
+            <li>
+              <NavBarLink href="/" text={"Login".toUpperCase()} />
+            </li>
+          </div>
         </ul>
       </nav>
     </>

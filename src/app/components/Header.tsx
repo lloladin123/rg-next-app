@@ -23,9 +23,7 @@ const Header = () => {
           />
         </Link>
       </div>
-      <div
-        className={`flex ml-auto flex-col md:flex md:flex-row md:items-center`}
-      >
+      <div className={`flex ml-auto`}>
         <NavBar />
       </div>
     </div>
