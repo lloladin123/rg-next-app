@@ -7,8 +7,8 @@ interface HoneycombPatternProp {
 
 const HoneycombPattern: React.FC<HoneycombPatternProp> = ({ children }) => {
   return (
-    <div className="w-full">
-      <div className="honeycombBackground">
+    <div className="bg-rg-green">
+      <div className="honeycombBackground w-full">
         {children}
         <div className="honeycombPattern"></div>
       </div>
