@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, MutableRefObject } from "react";
 import introImg1 from "../../images/introImg1.jpg";
 import introImg2 from "../../images/introImg2.jpg";
 import introImg3 from "../../images/introImg3.jpg";
@@ -7,6 +7,18 @@ import Image from "next/image";
 import Link from "next/link";
 
 const IntroBox = () => {
+  const thridrefdiv: MutableRefObject<HTMLDivElement | null> = useRef(null);
+  const thirdImage: MutableRefObject<HTMLImageElement | null> = useRef(null);
+
+  useEffect(() => {
+    if (thridrefdiv.current && thirdImage.current) {
+      const thirdDivHeight = thridrefdiv.current.clientHeight;
+      console.log(thirdDivHeight);
+      if (thirdDivHeight > 200)
+        thirdImage.current.style.height = `${thirdDivHeight}px`;
+      else thirdImage.current.style.height = "300px";
+    }
+  }, []);
   return (
     <div className="mx-auto">
       {/* First Row */}
@@ -87,27 +99,30 @@ const IntroBox = () => {
       <div className="flex">
         <div className="w-1/2">
           <Image
-            className="h-full object-cover"
+            ref={thirdImage}
+            className="h-full w-full object-cover"
             alt="introImg3"
             src={introImg3}
           />
         </div>
         <div className="w-1/2 p-4 bg-white text-black text-center">
-          <b>Kontakt Roskilde Gymnastikforening</b>
-          <p className="mt-4">
-            Roskilde Gymnastikforening har kontor i Idrættens Hus på Kildegården
-            1 i Roskilde.
-          </p>
-          <p className="mt-4">
-            Der er åbent for personlig henvendelse mandag kl. 16.30-19.00.
-          </p>
-          <p className="mt-4">
-            Du er også meget velkommen til at kontakte os på:
-            kontakt@roskildegf.dk eller på{" "}
-            <Link className="text-blue-500" href="/">
-              52 24 19 24
-            </Link>
-          </p>
+          <div ref={thridrefdiv} className="textHeightBox3">
+            <b>Kontakt Roskilde Gymnastikforening</b>
+            <p className="mt-4">
+              Roskilde Gymnastikforening har kontor i Idrættens Hus på
+              Kildegården 1 i Roskilde.
+            </p>
+            <p className="mt-4">
+              Der er åbent for personlig henvendelse mandag kl. 16.30-19.00.
+            </p>
+            <p className="mt-4">
+              Du er også meget velkommen til at kontakte os på:
+              kontakt@roskildegf.dk eller på{" "}
+              <Link className="text-blue-500" href="/">
+                52 24 19 24
+              </Link>
+            </p>
+          </div>
         </div>
       </div>
     </div>
