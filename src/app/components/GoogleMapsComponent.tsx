@@ -19,14 +19,6 @@ const GoogleMapsComponent = () => {
     <LoadScript googleMapsApiKey={googleMapsApiKey}>
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={13}>
         <Marker position={center} label="Roskilde Gymnastikforening" />
-        <div
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-          }}
-        ></div>
       </GoogleMap>
     </LoadScript>
   );
