@@ -110,7 +110,7 @@ const NavBar = () => {
               />
             </li>
           </div>
-          <div className="flex flex-col lg:space-x-3 space-y-8 lg:space-y-0 lg:flex-row">
+          <div className="flex ml-3 flex-col lg:space-x-3 space-y-8 lg:space-y-0 lg:flex-row">
             <li>
               <NavBarDropdown
                 items={[
