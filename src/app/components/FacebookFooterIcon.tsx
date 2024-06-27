@@ -6,8 +6,7 @@ const FacebookFooterIcon = () => {
   return (
     <Link
       href="/"
-      className="w-12 h-6 flex items-center justify-center rounded-sm hover:scale-125 hover:opacity-80 transition-all duration-300 ease-in-out"
-      style={{ backgroundColor: "#1E6873" }}
+      className="w-12 h-6 flex bg-blue-900 items-center justify-center rounded-sm hover:scale-125 hover:opacity-80 transition-all duration-300 ease-in-out"
     >
       <FaFacebookF size={25} />
     </Link>
