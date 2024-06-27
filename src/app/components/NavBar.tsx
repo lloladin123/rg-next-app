@@ -28,7 +28,7 @@ const NavBar = () => {
         <ul
           className={`lg:mt-0 mt-5 p-8 lg:bg-transparent absolute lg:relative lg:flex flex justify-between flex-row lg:items-center lg:py-4 lg:px-8 ${
             menuOpen ? "block" : "hidden"
-          } bg-gray-200 bg-opacity-80 w-full p-8`}
+          } bg-gray-200 bg-opacity-90 w-full p-8`}
           style={{
             width: "100%", // Full width of the screen
             left: 0, // Ensure it starts from the left edge of the screen
