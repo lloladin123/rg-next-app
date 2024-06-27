@@ -53,15 +53,15 @@ const IntroBox = () => {
   return (
     <div className="mx-auto">
       {/* First Row */}
-      <div className="flex flex-col sm:flex-row">
-        <div ref={firstImage} className="w-full sm:w-1/2">
+      <div className="flex flex-col md:flex-row">
+        <div ref={firstImage} className="w-full md:w-1/2">
           <Image
             className="h-full w-full object-center object-cover"
             alt="introImg1"
             src={introImg1}
           />
         </div>
-        <div className="w-full sm:w-1/2 bg-white p-8 text-sm text-black flex-grow">
+        <div className="w-full md:w-1/2 bg-white p-8 text-sm text-black flex-grow">
           <div className="" ref={firstrefdiv}>
             <p>Gymnastik og motion for hele familien!</p>
             <p className="mt-4">
@@ -91,7 +91,7 @@ const IntroBox = () => {
 
       {/* Second Row */}
       <div className="flex md:flex-row flex-col-reverse">
-        <div className="w-full sm:w-1/2 bg-white p-8 text-sm text-black">
+        <div className="w-full md:w-1/2 bg-white p-8 text-sm text-black">
           <div ref={secondrefdiv}>
             <p className="">
               Roskilde Gymnastikforening har dygtige og engagerede trænere, der
@@ -138,7 +138,7 @@ const IntroBox = () => {
             </p>
           </div>
         </div>
-        <div className="w-full sm:w-1/2" ref={secondImage}>
+        <div className="w-full md:w-1/2" ref={secondImage}>
           <Image
             className="h-full w-full object-center object-cover"
             alt="introImg2"
@@ -148,15 +148,15 @@ const IntroBox = () => {
       </div>
 
       {/* Third Row */}
-      <div className="flex flex-col sm:flex-row">
-        <div className="w-full sm:w-1/2" ref={thirdImage}>
+      <div className="flex flex-col md:flex-row">
+        <div className="w-full md:w-1/2" ref={thirdImage}>
           <Image
             className="h-full w-full object-center object-cover"
             alt="introImg3"
             src={introImg3}
           />
         </div>
-        <div className="w-full sm:w-1/2 p-4 bg-white text-black text-center">
+        <div className="w-full md:w-1/2 p-4 bg-white text-black text-center">
           <div ref={thridrefdiv}>
             <b>Kontakt Roskilde Gymnastikforening</b>
             <p className="mt-4">
