@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import NavBarLink from "./NavBarLink";
 import NavBarDropdown from "./NavBarDropdown";
 import NavBarDropdownItem from "./NavBarDropdownItem";
@@ -6,8 +6,33 @@ import { FaBars, FaTimes } from "react-icons/fa"; // Import icons for the burger
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const dropdownRef = useRef<HTMLUListElement>(null);
 
   const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      //   console.log("Clicked outside dropdown");
+      //   console.log("Event target:", event.target);
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      //   console.log("Removing event listener");
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const toggleDropdown = () => {
     setMenuOpen(!menuOpen);
   };
 
@@ -26,6 +51,7 @@ const NavBar = () => {
           </div>
         </div>
         <ul
+          ref={dropdownRef}
           className={`lg:mt-0 mt-5 p-8 lg:bg-transparent absolute lg:relative lg:flex flex justify-between flex-row lg:items-center lg:py-4 lg:px-8 ${
             menuOpen ? "block" : "hidden"
           } bg-gray-200 bg-opacity-90 w-full p-8`}

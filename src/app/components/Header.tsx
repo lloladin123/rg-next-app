@@ -13,7 +13,7 @@ const Header = () => {
       style={{ height: "100px" }}
     >
       <div
-        className="absolute left-4 top-1/2 transform -translate-y-1/2"
+        className="absolute top-1/2 transform -translate-y-1/2"
         style={{ zIndex: "999" }}
       >
         <Link href="/">
