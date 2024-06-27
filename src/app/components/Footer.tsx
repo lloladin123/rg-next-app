@@ -21,7 +21,7 @@ const Footer = () => {
           <div className="p-4 flex flex-col">
             <div className="relative">
               <b>
-                <h1 className="relative ml-2 z-10">Kontakt</h1>
+                <h1 className="relative ml-2">Kontakt</h1>
               </b>
               <span className="absolute inset-y-0 left-0 w-0.5 bg-rg-green z-0"></span>
             </div>
@@ -42,7 +42,7 @@ const Footer = () => {
           <div className="p-4 flex flex-col">
             <div className="relative">
               <b>
-                <h1 className="relative ml-2 z-10">Links</h1>
+                <h1 className="relative ml-2">Links</h1>
               </b>
               <span className="absolute inset-y-0 left-0 w-0.5 bg-rg-green z-0"></span>
             </div>
