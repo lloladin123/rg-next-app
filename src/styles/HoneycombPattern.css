@@ -1,7 +1,7 @@
 /* HoneycombPattern.css */
   .honeycombBackground {
     width: 100%; /* Full width of container */
-    height: 100%; /* Full height of container */
+    height: 20vw; /* Full height of container */
     background-image: url('../images/honeycombPattern.png'); /* Replace with correct path */
     background-repeat: repeat; /* Repeat the pattern */
     background-size: auto 40px; /* Auto width (to maintain aspect ratio) and fixed height */
