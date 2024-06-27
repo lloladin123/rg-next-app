@@ -14,7 +14,7 @@ const NavBar = () => {
   return (
     <>
       <nav className="lg:flex lg:items-center lg:justify-between lg:px-8">
-        <div className="flex justify-between items-center px-4 py-4 lg:py-0 lg:px-0">
+        <div className="">
           <div className="text-xl font-bold">Logo</div>
           <div className="lg:hidden">
             <button
@@ -26,9 +26,13 @@ const NavBar = () => {
           </div>
         </div>
         <ul
-          className={`lg:mt-0 mt-4 p-16 bg-white absolute lg:relative lg:flex flex justify-between flex-row lg:items-center lg:py-4 lg:px-8 ${
+          className={`lg:mt-0 mt-5 p-8 lg:bg-transparent absolute lg:relative lg:flex flex justify-between flex-row lg:items-center lg:py-4 lg:px-8 ${
             menuOpen ? "block" : "hidden"
-          } lg:block bg-white w-full p-8`}
+          } bg-gray-200 bg-opacity-80 w-full p-8`}
+          style={{
+            width: "100%", // Full width of the screen
+            left: 0, // Ensure it starts from the left edge of the screen
+          }}
         >
           <div className="flex flex-col lg:space-x-3 space-y-8 lg:space-y-0 lg:flex-row">
             <li>
