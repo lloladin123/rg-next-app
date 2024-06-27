@@ -161,7 +161,7 @@ const NavBar = () => {
               <NavBarLink href="/" text={"Login".toUpperCase()} />
             </li>
           </div>
-          <div className="w-1/2 block lg:hidden">
+          <div className="w-3/4 sm:block hidden lg:hidden">
             <Image
               className="h-full w-full object-center object-cover"
               alt="IntroImg2"
