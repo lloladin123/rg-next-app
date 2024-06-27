@@ -5,7 +5,6 @@ import introImg3 from "../../images/introImg3.jpg";
 
 import Image from "next/image";
 import Link from "next/link";
-import { url } from "inspector";
 
 const IntroBox = () => {
   const firstrefdiv: MutableRefObject<HTMLDivElement | null> = useRef(null);

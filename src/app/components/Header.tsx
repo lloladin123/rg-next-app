@@ -7,28 +7,12 @@ import NavBar from "./NavBar";
 import Link from "next/link";
 
 const Header = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 1000);
-    };
-
-    // Initial check on mount
-    handleResize();
-
-    // Event listener for window resize
-    window.addEventListener("resize", handleResize);
-
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
-    <div className="bg-white flex" style={{ height: "100px" }}>
-      <div className="my-3 ml-20">
+    <div
+      className="bg-white flex md:justify-around"
+      style={{ height: "100px" }}
+    >
+      <div className="my-3">
         <Link href="/">
           <Image
             src={LogoImage}
@@ -38,11 +22,9 @@ const Header = () => {
           />
         </Link>
       </div>
-      {isMobile ? null : (
-        <div className="flex justify-center items-center ml-20 sm:ml-20 md:ml-20 lg:ml-40">
-          <NavBar></NavBar>
-        </div>
-      )}
+      <div className="flex justify-around items-center">
+        <NavBar></NavBar>
+      </div>
     </div>
   );
 };

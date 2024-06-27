@@ -47,7 +47,7 @@ const NavBarDropdown: React.FC<NavBarDropownProps> = ({ text, items }) => {
         <div className="font-bold text-black">
           <IoIosArrowDown />
         </div>
-        <span className="-my-2 absolute inset-x-0 bottom-0 h-0.5 bg-green-800 underline-green"></span>{" "}
+        <span className="-my-2 absolute inset-x-0 bottom-0 h-0.5 bg-rg-green underline-green"></span>{" "}
       </button>
 
       {isOpen && (

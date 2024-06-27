@@ -16,9 +16,9 @@ export default function Home() {
       <video controls={false} autoPlay muted loop width="100%">
         <source src="/videos/RgHeroFilm.mp4" type="video/mp4" />
       </video>
-      <div className="flex flex-col md:flex-row bg-white justify-between p-4 space-x-4">
+      <div className="flex flex-col md:flex-row bg-gray-100 justify-between p-4 space-x-4">
         <div className="flex lg:flex-row flex-col">
-          <div className="lg:flex-1 text-gray-900 p-6">
+          <div className="lg:flex-1 text-gray-900 p-6 bg-white">
             <h1 className="text-xl font-bold mb-4">Nyheder</h1>
             <Link
               href="/"
@@ -47,7 +47,7 @@ export default function Home() {
               <p className="text-rg-green">Læs mere...</p>
             </Link>
           </div>
-          <div className="lg:flex-1 text-gray-900 p-6">
+          <div className="lg:flex-1 text-gray-900 p-6 bg-white">
             <h1 className="text-xl font-bold mb-4">Arrangementer</h1>
             <Link
               href="/"
@@ -71,7 +71,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="lg:flex-1 text-gray-900 p-6">
+        <div className="lg:flex-1 text-gray-900 p-6 bg-white">
           <h1 className="text-xl font-bold mb-4">Facebook</h1>
           <FacebookTimeLine />
         </div>
@@ -83,7 +83,7 @@ export default function Home() {
           </h1>
           <Link
             href="/"
-            className="hover:text-rg-green flex items-center space-x-1"
+            className="hover:opacity-80 flex items-center space-x-1"
           >
             Gå til tilmedling <MdArrowForwardIos color="white" />
           </Link>
