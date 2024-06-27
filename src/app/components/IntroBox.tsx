@@ -72,7 +72,7 @@ const IntroBox = () => {
               der noget for enhver smag og alderstrin. Du kan læse om blandt
               andet rytmisk gymnastik, springgymnastik, trampolin, acro, yoga,
               step, seniormotion og meget mere under{" "}
-              <Link className="text-blue-500" href="/">
+              <Link className="text-rg-green" href="/">
                 TILMELDING.
               </Link>
             </p>
@@ -96,7 +96,7 @@ const IntroBox = () => {
               færdigheder og sætte gode rammer for både konkurrence-,
               opvisnings- og motionshold. Læs mere om vores instruktører og
               bestyrelsen under menupunkt{" "}
-              <Link className="text-blue-500" href="/">
+              <Link className="text-rg-green" href="/">
                 KONTAKT.
               </Link>
             </p>
@@ -105,13 +105,13 @@ const IntroBox = () => {
               sammenhold, instruktør-events og uddannelse inden for det, du
               underviser i? Hør mere om mulighederne ved at kontakte kontoret på
               mail:{" "}
-              <Link className="text-blue-500" href="/">
+              <Link className="text-rg-green" href="/">
                 kontakt@roskildegf.dk
               </Link>
             </p>
             <p className="mt-4">
               Følg også gerne med på{" "}
-              <Link className="text-blue-500" href="/">
+              <Link className="text-rg-green" href="/">
                 FACEBOOK
               </Link>
               , hvor information om fx ny sæson, den årlige opvisning og
@@ -156,7 +156,7 @@ const IntroBox = () => {
             <p className="mt-4">
               Du er også meget velkommen til at kontakte os på:
               kontakt@roskildegf.dk eller på{" "}
-              <Link className="text-blue-500" href="/">
+              <Link className="text-rg-green" href="/">
                 52 24 19 24
               </Link>
             </p>

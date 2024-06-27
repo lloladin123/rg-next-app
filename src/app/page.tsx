@@ -23,27 +23,27 @@ export default function Home() {
             href="/"
             className="block rounded-lg shadow-md p-4 mb-4 hover-parent"
           >
-            <h2 className="text-lg text-blue-400 font-semibold">
+            <h2 className="text-lg text-rg-green font-semibold">
               Info. om sæson 2024/2025
             </h2>
             <p className="mt-2 text-gray-600 text-xs">29-04-2024</p>
             <p className="mt-1">
               Kære besøgende på gymnastikforeningens hjemmeside.
             </p>
-            <p className="text-blue-400">Læs mere...</p>
+            <p className="text-rg-green">Læs mere...</p>
           </Link>
           <Link
             href="/"
             className="block rounded-lg shadow-md p-4 mb-4 hover-parent"
           >
-            <h2 className="text-lg text-blue-400 font-semibold">
+            <h2 className="text-lg text-rg-green font-semibold">
               Info. om sæson 2024/2025
             </h2>
             <p className="mt-2 text-gray-600 text-xs">29-04-2024</p>
             <p className="mt-1">
               Kære besøgende på gymnastikforeningens hjemmeside.
             </p>
-            <p className="text-blue-400">Læs mere...</p>
+            <p className="text-rg-green">Læs mere...</p>
           </Link>
         </div>
         <div className="lg:flex-1 text-gray-900 p-6">
@@ -81,7 +81,7 @@ export default function Home() {
           </h1>
           <Link
             href="/"
-            className="hover:text-blue-400 flex items-center space-x-1"
+            className="hover:text-rg-green flex items-center space-x-1"
           >
             Gå til tilmedling <MdArrowForwardIos color="white" />
           </Link>

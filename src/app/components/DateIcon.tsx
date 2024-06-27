@@ -26,8 +26,10 @@ const DateIcon: React.FC<DateIconProps> = ({ date }) => {
 
   return (
     <div className="flex items-center space-x-2">
-      <FaCalendarAlt color="#3182ce" />
-      <div className="text-calendar-blue">
+      <div className="text-rg-green">
+        <FaCalendarAlt />
+      </div>
+      <div className="text-rg-green">
         <div className="text-xl font-bold">{day}</div>
         <div className="text-sm">{month}</div>
       </div>
