@@ -13,7 +13,7 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="lg:flex lg:items-center lg:justify-between lg:px-8">
+      <nav className="lg:flex lg:items-center lg:justify-between">
         <div className="">
           <div className="text-xl font-bold">Logo</div>
           <div className="lg:hidden">
