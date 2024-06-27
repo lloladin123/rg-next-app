@@ -113,7 +113,7 @@ const IntroBox = () => {
               mail:{" "}
               <Link
                 className="text-rg-green hover:opacity-80 hover:text-green-900"
-                href="/"
+                href="mailto:kontakt@roskildegf.dk"
               >
                 kontakt@roskildegf.dk
               </Link>
@@ -122,7 +122,8 @@ const IntroBox = () => {
               Følg også gerne med på{" "}
               <Link
                 className="text-rg-green hover:opacity-80 hover:text-green-900"
-                href="/"
+                target="blank"
+                href="https://www.facebook.com/p/Roskilde-Gymnastikforening-100031858223372/"
               >
                 FACEBOOK
               </Link>
@@ -170,7 +171,7 @@ const IntroBox = () => {
               kontakt@roskildegf.dk eller på{" "}
               <Link
                 className="text-rg-green hover:opacity-80 hover:text-green-900"
-                href="/"
+                href="tel:52 24 19 24"
               >
                 52 24 19 24
               </Link>
