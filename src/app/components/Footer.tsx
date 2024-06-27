@@ -20,10 +20,8 @@ const Footer = () => {
           {/* Box 1 */}
           <div className="p-4 flex flex-col">
             <div className="relative">
-              <b>
-                <h1 className="relative ml-2">Kontakt</h1>
-              </b>
-              <span className="absolute inset-y-0 left-0 w-0.5 bg-rg-green z-0"></span>
+              <h1 className="font-bold relative ml-2">Kontakt</h1>
+              <span className="absolute inset-y-0 left-0 w-0.5 bg-rg-green"></span>
             </div>
             <div className="mt-3 text-sm">
               <p>Roskilde Gymnastikforening</p>
@@ -41,10 +39,8 @@ const Footer = () => {
           {/* Box 2 */}
           <div className="p-4 flex flex-col">
             <div className="relative">
-              <b>
-                <h1 className="relative ml-2">Links</h1>
-              </b>
-              <span className="absolute inset-y-0 left-0 w-0.5 bg-rg-green z-0"></span>
+              <h1 className="font-bold relative ml-2">Links</h1>
+              <span className="absolute inset-y-0 left-0 w-0.5 bg-rg-green"></span>
             </div>
             <ul className="mt-2 text-sm list-disc">
               <Link href="/">
