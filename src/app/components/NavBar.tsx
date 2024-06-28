@@ -16,8 +16,6 @@ const NavBar = () => {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      //   console.log("Clicked outside dropdown");
-      //   console.log("Event target:", event.target);
       if (
         dropdownRef.current &&
         !dropdownRef.current.contains(event.target as Node)
@@ -26,13 +24,27 @@ const NavBar = () => {
       }
     };
 
+    const handleScrollLock = () => {
+      if (menuOpen) {
+        document.body.style.overflow = "hidden"; // Disable scrolling
+      } else {
+        document.body.style.overflow = ""; // Enable scrolling
+      }
+    };
+
+    if (menuOpen) {
+      document.body.style.overflow = "hidden"; // Disable scrolling
+    } else {
+      document.body.style.overflow = ""; // Enable scrolling
+    }
+
     document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
-      //   console.log("Removing event listener");
       document.removeEventListener("mousedown", handleClickOutside);
+      document.body.style.overflow = ""; // Ensure scrolling is enabled when component unmounts
     };
-  }, []);
+  }, [menuOpen]);
 
   const toggleDropdown = () => {
     setMenuOpen(!menuOpen);
