@@ -66,7 +66,7 @@ const NavBar = () => {
         </div>
         <ul
           ref={dropdownRef}
-          className={`lg:mt-0 mt-5 p-8 space-x-1 space-y-8 lg:bg-transparent absolute lg:relative flex flex-row justify-between lg:items-center lg:py-4 lg:px-8 ${
+          className={`lg:mt-0 mt-4 p-8 space-x-1 space-y-8 lg:bg-transparent absolute lg:relative flex flex-row justify-between lg:items-center lg:py-4 lg:px-8 ${
             menuOpen ? "block" : "hidden lg:block"
           } bg-gray-200 w-full p-8`}
           style={{
