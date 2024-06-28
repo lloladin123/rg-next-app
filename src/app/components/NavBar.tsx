@@ -58,10 +58,10 @@ const NavBar = () => {
             menuOpen ? "block" : "hidden lg:block"
           } bg-gray-200 w-full p-8`}
           style={{
-            width: "100%", // Full width of the screen
+            width: "100%",
             height: menuOpen ? "calc(100vh - 100px)" : "auto",
             zIndex: 998,
-            left: 0, // Ensure it starts from the left edge of the screen
+            left: 0,
           }}
         >
           <div className="w-1/4 flex flex-col lg:space-x-3 justify-between lg:space-y-0 lg:flex-row">

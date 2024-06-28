@@ -14,7 +14,7 @@ const Footer = () => {
     <>
       <div
         className="flex flex-col w-full md:flex-row p-8"
-        style={{ backgroundColor: "#222" }}
+        style={{ backgroundColor: "#222", position: "relative", zIndex: "-1" }}
       >
         <div className="md:w-1/2 w-full flex flex-col md:flex-row justify-around">
           {/* Box 1 */}
@@ -40,7 +40,7 @@ const Footer = () => {
           <div className="p-4 flex flex-col">
             <div className="relative">
               <h1 className="font-bold relative ml-2">Links</h1>
-              <span className="absolute inset-y-0 left-0 w-0.5 bg-rg-green"></span>
+              <span className="absolute inset-y-0 left-0 w-0.5 bg-rg-green z-0"></span>
             </div>
             <ul className="mt-2 text-sm list-disc">
               <Link href="/">
@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
         <div className="md:w-1/2 w-full">
           {/* Box 3 */}
-          <div className="p-4 flex">
+          <div className="md:w-full p-4 flex">
             <GoogleMapsComponent />
           </div>
         </div>
