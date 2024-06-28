@@ -1,22 +1,18 @@
-"use client";
-
 import React, { useEffect, useRef, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import "../../styles/NavBar.css";
 
-interface NavBarDropownProps {
+interface NavBarDropdownProps {
   text: string;
   items: React.ReactNode[];
 }
 
-const NavBarDropdown: React.FC<NavBarDropownProps> = ({ text, items }) => {
+const NavBarDropdown: React.FC<NavBarDropdownProps> = ({ text, items }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      //   console.log("Clicked outside dropdown");
-      //   console.log("Event target:", event.target);
       if (
         dropdownRef.current &&
         !dropdownRef.current.contains(event.target as Node)
@@ -28,7 +24,6 @@ const NavBarDropdown: React.FC<NavBarDropownProps> = ({ text, items }) => {
     document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
-      //   console.log("Removing event listener");
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
@@ -37,22 +32,42 @@ const NavBarDropdown: React.FC<NavBarDropownProps> = ({ text, items }) => {
     setIsOpen(!isOpen);
   };
 
+  const handleMouseEnter = () => {
+    if (window.innerWidth >= 1024) {
+      setIsOpen(true);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (window.innerWidth >= 1024) {
+      setIsOpen(false);
+    }
+  };
+
+  const handleClick = () => {
+    if (window.innerWidth < 1024) {
+      setIsOpen(!isOpen);
+    }
+  };
+
   return (
-    <div className="relative">
+    <div className="relative group">
       <button
         className="text-gray-600 font-semibold text-sm hover:text-gray-500 flex items-center hover:underline-green whitespace-nowrap"
-        onClick={toggleDropdown}
+        onClick={handleClick}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
         <span>{text}</span>
         <div className="font-bold text-black">
           <IoIosArrowDown />
         </div>
-        <span className="-my-2 absolute inset-x-0 bottom-0 h-0.5 bg-rg-green underline-green"></span>{" "}
+        <span className="-my-2 absolute inset-x-0 bottom-0 h-0.5 bg-rg-green underline-green"></span>
       </button>
 
       {isOpen && (
         <div
-          className="absolute z-10 bg-white mt-2 rounded-md shadow-lg flex flex-col items-center"
+          className="absolute z-10 bg-white mt-2 rounded-md shadow-lg flex flex-col items-center lg:group-hover:block"
           ref={dropdownRef}
         >
           {items.map((item, index) => (
@@ -61,7 +76,7 @@ const NavBarDropdown: React.FC<NavBarDropownProps> = ({ text, items }) => {
               key={index}
             >
               {item}
-            </div> // Render each item received from parent
+            </div>
           ))}
         </div>
       )}
