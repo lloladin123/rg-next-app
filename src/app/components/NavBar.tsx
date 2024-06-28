@@ -15,20 +15,27 @@ const NavBar = () => {
   };
 
   useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      document.body.style.overflow = ""; // Cleanup: ensure scrolling is enabled
+    };
+  }, []);
+
+  useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
         dropdownRef.current &&
         !dropdownRef.current.contains(event.target as Node)
       ) {
         setMenuOpen(false);
-      }
-    };
-
-    const handleScrollLock = () => {
-      if (menuOpen) {
-        document.body.style.overflow = "hidden"; // Disable scrolling
-      } else {
-        document.body.style.overflow = ""; // Enable scrolling
       }
     };
 
@@ -45,10 +52,6 @@ const NavBar = () => {
       document.body.style.overflow = ""; // Ensure scrolling is enabled when component unmounts
     };
   }, [menuOpen]);
-
-  const toggleDropdown = () => {
-    setMenuOpen(!menuOpen);
-  };
 
   return (
     <>
@@ -71,7 +74,7 @@ const NavBar = () => {
           } bg-gray-200 w-full p-8`}
           style={{
             width: "100%",
-            height: menuOpen ? "calc(100vh - 100px)" : "auto",
+            height: menuOpen ? "calc(100vh - 90px)" : "auto",
             zIndex: 998,
             left: 0,
           }}
