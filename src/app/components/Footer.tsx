@@ -14,7 +14,7 @@ const Footer = () => {
     <>
       <div
         className="flex flex-col w-full md:flex-row p-8"
-        style={{ backgroundColor: "#222", position: "relative", zIndex: "-1" }}
+        style={{ backgroundColor: "#222", zIndex: 1 }} // Ensure a lower z-index for the footer content
       >
         <div className="md:w-1/2 w-full flex flex-col md:flex-row justify-around">
           {/* Box 1 */}
@@ -30,7 +30,7 @@ const Footer = () => {
               <p>E-mail: kontakt@roskildegf.dk</p>
               <p>CVR: 22583514</p>
             </div>
-            <div className="mt-4 flex flex row space-x-2 items-center">
+            <div className="mt-4 flex flex-row space-x-2 items-center">
               <FacebookFooterIcon />
               <InstagramFooterIcon />
             </div>
@@ -58,14 +58,17 @@ const Footer = () => {
         </div>
         <div className="md:w-1/2 w-full">
           {/* Box 3 */}
-          <div className="md:w-full p-4 flex">
+          <div
+            className="md:w-full p-4 flex"
+            style={{ position: "relative", zIndex: 0 }}
+          >
             <GoogleMapsComponent />
           </div>
         </div>
       </div>
       <div
         className="flex p-2 flex-col md:flex-row items-center justify-around w-full"
-        style={{ backgroundColor: "#383838" }}
+        style={{ backgroundColor: "#383838", zIndex: 0 }} // Ensure a lower z-index for the footer bar
       >
         <div className="">
           <p>© 2024 Roskilde Gymnastikforening.</p>
