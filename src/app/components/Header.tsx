@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <>
       <div
-        className="fixed zIndex-998 w-full bg-white flex justify-between items-center px-4 md:px-8"
+        className="fixed zIndex-998 w-full bg-white flex justify-between items-center px-4 md:px-8 border-b-2 border-black"
         style={{ height: "90px", zIndex: "998" }}
       >
         <div
@@ -31,10 +31,6 @@ const Header = () => {
           <NavBar />
         </div>
       </div>
-      <div
-        className="w-full"
-        style={{ backgroundColor: "white", height: "100px" }}
-      ></div>
     </>
   );
 };

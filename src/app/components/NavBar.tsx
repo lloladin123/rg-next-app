@@ -74,7 +74,7 @@ const NavBar = () => {
           } bg-gray-200 w-full p-8`}
           style={{
             width: "100%",
-            height: menuOpen ? "calc(100vh - 90px)" : "auto",
+            height: menuOpen ? "calc(100vh - 100px)" : "auto",
             zIndex: 998,
             left: 0,
           }}
