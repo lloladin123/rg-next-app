@@ -13,10 +13,7 @@ import "../../styles/Footer.css";
 const Footer = () => {
   return (
     <div className="footer">
-      <div
-        className="flex flex-col w-full md:flex-row p-8"
-        style={{ backgroundColor: "#222", zIndex: 1 }} // Ensure a lower z-index for the footer content
-      >
+      <div className="flex flex-col w-full md:flex-row p-8">
         <div className="md:w-1/2 w-full flex flex-col sm:flex-row justify-between sm:justify-around">
           {/* Box 1 */}
           <div className="p-4 flex flex-col">
@@ -67,10 +64,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div
-        className="flex p-2 flex-col md:flex-row items-center justify-around w-full"
-        style={{ backgroundColor: "#383838", zIndex: 0 }} // Ensure a lower z-index for the footer bar
-      >
+      <div className="flex p-2 flex-col md:flex-row items-center justify-around w-full footer-bar">
         <div className="">
           <p>© 2024 Roskilde Gymnastikforening.</p>
         </div>
