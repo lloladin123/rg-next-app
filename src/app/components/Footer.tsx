@@ -8,10 +8,11 @@ import Link from "next/link";
 import GoogleMapsComponent from "./GoogleMapsComponent";
 import Image from "next/image";
 import InstagramFooterIcon from "./InstagramFooterIcon";
+import "../../styles/Footer.css";
 
 const Footer = () => {
   return (
-    <>
+    <div className="footer">
       <div
         className="flex flex-col w-full md:flex-row p-8"
         style={{ backgroundColor: "#222", zIndex: 1 }} // Ensure a lower z-index for the footer content
@@ -80,7 +81,7 @@ const Footer = () => {
           <Image className="w-10" alt="visaLogo" src={visa} />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
