@@ -38,6 +38,12 @@ const Header = () => {
           <NavBar />
         </div>
       </div>
+      <div
+        className="bg-white w-full"
+        style={{
+          height: "90px",
+        }}
+      ></div>
     </>
   );
 };
