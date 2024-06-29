@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import LogoImage from "../../images/RgLogo.jpg";
 import NavBar from "./NavBar";
@@ -14,37 +14,17 @@ const Header = () => {
         style={{ height: "90px", zIndex: "998" }}
       >
         <div
-          className="relative flex items-center justify-center"
-          style={{
-            width: "110px",
-            height: "110px",
-            zIndex: "999",
-            marginTop: "8px",
-          }}
+          className="absolute top-1/2 transform -translate-y-1/2"
+          style={{ zIndex: "999" }}
         >
-          <div
-            className="absolute mt-11 rounded-full bg-white border-b-2 border-black"
-            style={{ width: "105px", height: "105px" }}
-          ></div>
           <Link href="/">
-            <div
-              className="mt-8"
-              style={{
-                width: "110px",
-                height: "110px",
-                position: "relative",
-                overflow: "hidden",
-                borderRadius: "50%",
-              }}
-            >
-              <Image
-                src={LogoImage}
-                alt="RgLogo"
-                layout="fill"
-                objectFit="cover"
-                quality={100}
-              />
-            </div>
+            <Image
+              src={LogoImage}
+              className="mt-8 ml-8 rounded-full hover:opacity-75 transition-opacity duration-300"
+              alt="RgLogo"
+              width={110}
+              height={110}
+            />
           </Link>
         </div>
         <div className={`flex ml-auto`}>
@@ -52,10 +32,8 @@ const Header = () => {
         </div>
       </div>
       <div
-        className="bg-white w-full"
-        style={{
-          height: "90px",
-        }}
+        className="w-full"
+        style={{ backgroundColor: "white", height: "90px" }}
       ></div>
     </>
   );
