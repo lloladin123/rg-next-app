@@ -50,13 +50,22 @@ const NavBarDropdown: React.FC<NavBarDropdownProps> = ({ text, items }) => {
     }
   };
 
+  const handleItemClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    // Prevent click event propagation to the parent button
+    event.stopPropagation();
+    // Optionally, close the dropdown when an item is clicked
+    setIsOpen(false);
+  };
+
   return (
-    <div className="relative group">
+    <div
+      className="relative group"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <button
         className="text-gray-600 font-semibold text-sm hover:text-gray-500 flex items-center hover:underline-green whitespace-nowrap"
         onClick={handleClick}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
       >
         <span>{text}</span>
         <div className="font-bold text-black">
@@ -69,11 +78,14 @@ const NavBarDropdown: React.FC<NavBarDropdownProps> = ({ text, items }) => {
         <div
           className="absolute z-10 bg-white mt-2 rounded-md shadow-lg flex flex-col items-center lg:group-hover:block"
           ref={dropdownRef}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
           {items.map((item, index) => (
             <div
-              className="my-1 text-left w-full px-4 whitespace-nowrap"
+              className="my-1 text-left w-full px-4 whitespace-nowrap cursor-pointer"
               key={index}
+              onClick={handleItemClick} // Add onClick handler to each item
             >
               {item}
             </div>
