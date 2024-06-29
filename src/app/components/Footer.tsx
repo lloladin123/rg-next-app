@@ -16,7 +16,7 @@ const Footer = () => {
         className="flex flex-col w-full md:flex-row p-8"
         style={{ backgroundColor: "#222", zIndex: 1 }} // Ensure a lower z-index for the footer content
       >
-        <div className="md:w-1/2 w-full flex flex-col md:flex-row justify-around">
+        <div className="md:w-1/2 w-full flex flex-col sm:flex-row justify-between sm:justify-around">
           {/* Box 1 */}
           <div className="p-4 flex flex-col">
             <div className="relative">
