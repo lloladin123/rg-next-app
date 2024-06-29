@@ -20,7 +20,7 @@ const Header = () => {
           <Link href="/">
             <Image
               src={LogoImage}
-              className="mt-8 ml-8 rounded-full hover:opacity-75 transition-opacity duration-300"
+              className="mt-8 rounded-full hover:opacity-75 transition-opacity duration-300"
               alt="RgLogo"
               width={110}
               height={110}
