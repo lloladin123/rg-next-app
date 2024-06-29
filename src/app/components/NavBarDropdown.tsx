@@ -76,20 +76,22 @@ const NavBarDropdown: React.FC<NavBarDropdownProps> = ({ text, items }) => {
 
       {isOpen && (
         <div
-          className="absolute z-10 bg-white mt-2 rounded-md shadow-lg flex flex-col items-center lg:group-hover:block"
+          className="absolute z-10  flex flex-col items-center lg:group-hover:block"
           ref={dropdownRef}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          {items.map((item, index) => (
-            <div
-              className="my-1 text-left w-full px-4 whitespace-nowrap cursor-pointer"
-              key={index}
-              onClick={handleItemClick} // Add onClick handler to each item
-            >
-              {item}
-            </div>
-          ))}
+          <div className="mt-2 bg-white rounded-md shadow-lg">
+            {items.map((item, index) => (
+              <div
+                className="my-1 text-left w-full px-4 whitespace-nowrap cursor-pointer"
+                key={index}
+                onClick={handleItemClick} // Add onClick handler to each item
+              >
+                {item}
+              </div>
+            ))}
+          </div>
         </div>
       )}
     </div>
