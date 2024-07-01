@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import NavBarLink from "@components/NavBarLink";
-import NavBarDropdown from "@components/NavBarDropdown";
-import NavBarDropdownItem from "@components/NavBarDropdownItem";
+import NavBarLink from "@/app/components/NavBar/NavBarLink";
+import NavBarDropdown from "@/app/components/NavBar/NavBarDropdown";
+import NavBarDropdownItem from "@/app/components/NavBar/NavBarDropdownItem";
 import { FaBars, FaTimes } from "react-icons/fa"; // Import icons for the burger menu
 import Image from "next/image";
 import IntroImg2 from "@images/introImg2.jpg";
@@ -88,7 +88,7 @@ const NavBar = () => {
                 items={[
                   <NavBarDropdownItem
                     key="holdtilmedling"
-                    href="/"
+                    href="/SignUp"
                     text={"Holdtilmedling".toUpperCase()}
                   />,
                   <NavBarDropdownItem

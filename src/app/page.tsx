@@ -5,9 +5,9 @@ import DateIcon from "./components/Icons/DateIcon";
 import { MdArrowForwardIos } from "react-icons/md";
 
 import "../styles/page.css";
-import FacebookTimeLine from "./components/FacebookTimeLine";
-import HoneycombPattern from "./components/HoneycombPattern";
-import IntroBox from "./components/IntroBox";
+import FacebookTimeLine from "@integrations/FacebookTimeLine";
+import HoneycombPattern from "@Index/HoneycombPattern";
+import IntroBox from "@Index/IntroBox";
 
 export default function Home() {
   const today = new Date();

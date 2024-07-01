@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import LogoImage from "@images/RgLogo.jpg";
-import NavBar from "@components/NavBar";
+import NavBar from "@NavBar/NavBar";
 import Link from "next/link";
 
 const Header = () => {

@@ -23,7 +23,10 @@
       "@app/*": ["./src/app*"],
       "@images/*": ["./src/images/*"],
       "@styles/*": ["./src/styles/*"],
-      "@Icons/*": ["./src/app/components/Icons/*"]
+      "@Icons/*": ["./src/app/components/Icons/*"],
+      "@integrations/*": ["./src/app/components/integrations/*"],
+      "@NavBar/*": ["./src/app/components/NavBar/*"],
+      "@Index/*": ["./src/app/components/Index/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

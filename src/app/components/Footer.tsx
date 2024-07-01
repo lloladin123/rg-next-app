@@ -5,7 +5,7 @@ import mastercardLogo from "@images/mastercard_logo.png";
 import visaElectron from "@images/visa_electron.jpg";
 import visa from "@images/visa_logo.jpg";
 import Link from "next/link";
-import GoogleMapsComponent from "@components/GoogleMapsComponent";
+import GoogleMapsComponent from "@integrations/GoogleMapsComponent";
 import Image from "next/image";
 import InstagramFooterIcon from "@Icons/InstagramFooterIcon";
 import "@styles/Footer.css";
