@@ -23,6 +23,9 @@ const config: Config = {
         'lg': '1024px',
         'xl': '1280px',
       },
+      boxShadow: {
+        'full': '1px 1px 5px 5px rgba(0, 0, 0, 0.3)', // Customize as needed
+      },
     },
   },
   plugins: [],

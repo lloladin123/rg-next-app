@@ -9,7 +9,7 @@ import FilterButtonTime from "./FilterButtonTime";
 const FilterButtons: React.FC = () => {
   return (
     <div className="w-50 flex flex-row items-center justify-center space-x-2 space-y-1 p-4 flex-wrap whitespace-nowrap">
-      <button className="bg-gray-500 p-2 rounded-xl">
+      <button className="bg-gray-500 p-2 mt-1 rounded-lg">
         <div>Vis alle</div>
       </button>
       <FilterButtonTeamGroups />
