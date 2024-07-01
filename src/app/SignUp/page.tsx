@@ -2,22 +2,18 @@ import Image from "next/image";
 import React from "react";
 import SpringMuseneHold from "../../images/springmuseneHold.jpeg";
 import SearchBar from "@SignUp/SearchBar";
+import FilterButton from "@SignUp/FilterButtons";
 
 const SignUp = () => {
   return (
     <div className="flex bg-white flex-col items-center w-full">
       <div className="w-3/4">
         <SearchBar />
-        {/* Filter buttons */}
-        <div className="bg-green-900 w-50 flex flex-row items-center justify-center space-x-2 p-4 mt-2">
-          <button className="bg-gray-500">Vis alle</button>
-          <button className="bg-gray-500">Holdgrupper</button>
-          <button className="bg-gray-500">Pladsstatus</button>
-          <button className="bg-gray-500">Tidspunkt</button>
-          <button className="bg-gray-500">Lokation</button>
+        <div className="relative z-10">
+          <FilterButton />
         </div>
         {/* CardBoxsContainer */}
-        <div className="space-y-4 mt-4">
+        <div className="relative z-1 space-y-4 mt-2">
           {/* Cardbox */}
           <div
             className="bg-blue-900 w-full flex flex-row"
