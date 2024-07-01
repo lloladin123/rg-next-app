@@ -42,7 +42,7 @@ const SignUpCardBox: React.FC<SignUpCardBoxProps> = ({
       <Link
         href="/"
         className="bg-white border shadow-lg rounded-3xl w-full flex flex-row hover:shadow-full duration-300 ease-in-out"
-        style={{ height: "300px" }}
+        style={{ height: "310px" }}
       >
         {/* Image */}
         <div className="relative" style={{ width: "350px" }}>
@@ -135,9 +135,9 @@ const SignUpCardBox: React.FC<SignUpCardBoxProps> = ({
             </div>
           </div>
           {/* Description */}
-          <div className="mt-auto">
+          <div className="mt-auto mb-2">
             <div className="flex flex-row items-start space-x-2">
-              <div className="text-rg-green mt-1">
+              <div className="text-rg-green mt-1 ">
                 <IoInformationCircleSharp />
               </div>
               <h1>Beskrivelse</h1>
@@ -145,7 +145,7 @@ const SignUpCardBox: React.FC<SignUpCardBoxProps> = ({
             <p className="font-extralight ml-6">{description}</p>
           </div>
           {/* Button */}
-          <div className="bg-rg-green rounded-xl p-2 flex items-center justify-center w-full">
+          <div className="bg-rg-green rounded-xl p-2 mb-2 flex items-center justify-center w-full">
             <button className="">Læse mere & tilmeld</button>
           </div>
         </div>
