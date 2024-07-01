@@ -36,6 +36,17 @@ const SignUp = () => {
               description={description}
               cardImage={cardImage}
             />
+            <SignUpCardBox
+              teamName={teamName}
+              age={age}
+              price={price}
+              startDate={startDate}
+              endDate={endDate}
+              instructors={instructors}
+              instructorsAid={instructorsAid}
+              description={description}
+              cardImage={cardImage}
+            />
           </div>
         </div>
         {/* Pagination */}
