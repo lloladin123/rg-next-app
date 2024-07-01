@@ -7,7 +7,7 @@ import Pagination from "../components/SignUp/Pagination";
 
 const SignUp = () => {
   const teamName = "(030) Springmusene (7-10år)";
-  const age = 7;
+  const age = "7-10";
   const price = 2150;
   const startDate = new Date("2024-09-02");
   const endDate = new Date("2025-06-16");

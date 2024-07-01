@@ -9,7 +9,7 @@ import { IoInformationCircleSharp } from "react-icons/io5";
 
 interface SignUpCardBoxProps {
   teamName: string;
-  age: number;
+  age: string;
   price: number;
   startDate: Date;
   endDate: Date;
@@ -40,7 +40,7 @@ const SignUpCardBox: React.FC<SignUpCardBoxProps> = ({
     <>
       {/* Cardbox */}
       <Link
-        href="/"
+        href="/Team"
         className="bg-white border shadow-lg rounded-3xl w-full flex flex-row hover:shadow-full duration-300 ease-in-out"
         style={{ height: "310px" }}
       >
