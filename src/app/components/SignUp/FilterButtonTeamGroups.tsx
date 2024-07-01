@@ -17,7 +17,7 @@ const FilterButtonTeamGroups: React.FC = () => {
   ];
 
   return (
-    <div className="w-50 flex flex-row items-center justify-center bg-gray-500 rounded-lg px-2 space-x-1">
+    <div className="w-50 flex flex-row items-center justify-center bg-gray-500 rounded-2xl px-2 space-x-1">
       <FaListUl />
       <SignUpDropdown menuItems={menuItems} title="Holdgrupper" />
     </div>

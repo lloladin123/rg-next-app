@@ -3,6 +3,7 @@ import SearchBar from "@SignUp/SearchBar";
 import FilterButton from "@SignUp/FilterButtons";
 import SignUpCardBox from "@SignUp/SignUpCardBox";
 import SpringMuseneHold from "@images/SpringmuseneHold.jpeg";
+import Pagination from "../components/SignUp/Pagination";
 
 const SignUp = () => {
   const teamName = "(030) Springmusene (7-10år)";
@@ -22,6 +23,8 @@ const SignUp = () => {
         <div className="relative z-10">
           <FilterButton />
         </div>
+        <Pagination />
+
         {/* CardBoxsContainer */}
         <div className="border-t">
           <div className="relative z-1 space-y-4 mt-4">
@@ -49,14 +52,7 @@ const SignUp = () => {
             />
           </div>
         </div>
-        {/* Pagination */}
-        <div className="bg-yellow-900 w-full flex flex-row items-center justify-center space-x-4 p-4 mt-4">
-          <button>Første</button>
-          <button>Tilbage</button>
-          <p>Side 1</p>
-          <button>Næste</button>
-          <button>sidste</button>
-        </div>
+        <Pagination />
       </div>
     </div>
   );
