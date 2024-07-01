@@ -15,7 +15,7 @@ const config: Config = {
       },
       colors: {
         'calendar-blue': '#3182ce',
-        'rg-green' :' #5EA6A4',
+        'rg-green' :' #1E6873',
       },
       screens: {
         'sm': '640px',

@@ -1,15 +1,13 @@
 import Image from "next/image";
 import React from "react";
 import SpringMuseneHold from "../../images/springmuseneHold.jpeg";
+import SearchBar from "@SignUp/SearchBar";
 
 const SignUp = () => {
   return (
     <div className="flex bg-white flex-col items-center w-full">
       <div className="w-3/4">
-        <div className="bg-red-900 w-full flex flex-row items-center justify-center p-4 mt-2">
-          <input type="text" placeholder="Søg" />
-          <button className="bg-blue-500 ">Find hold</button>
-        </div>
+        <SearchBar />
         {/* Filter buttons */}
         <div className="bg-green-900 w-50 flex flex-row items-center justify-center space-x-2 p-4 mt-2">
           <button className="bg-gray-500">Vis alle</button>
