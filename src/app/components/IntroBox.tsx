@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, MutableRefObject } from "react";
-import introImg1 from "../../images/introImg1.jpg";
-import introImg2 from "../../images/introImg2.jpg";
-import introImg3 from "../../images/introImg3.jpg";
+import introImg1 from "@images/introImg1.jpg";
+import introImg2 from "@images/introImg2.jpg";
+import introImg3 from "@images/introImg3.jpg";
 
 import Image from "next/image";
 import Link from "next/link";

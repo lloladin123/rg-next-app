@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import "../../styles/NavBar.css";
+import "@styles/NavBar.css";
 
 interface NarBarLinkProps {
   href: string;

@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import NavBarLink from "./NavBarLink";
-import NavBarDropdown from "./NavBarDropdown";
-import NavBarDropdownItem from "./NavBarDropdownItem";
+import NavBarLink from "@components/NavBarLink";
+import NavBarDropdown from "@components/NavBarDropdown";
+import NavBarDropdownItem from "@components/NavBarDropdownItem";
 import { FaBars, FaTimes } from "react-icons/fa"; // Import icons for the burger menu
 import Image from "next/image";
-import IntroImg2 from "../../images/introImg2.jpg";
+import IntroImg2 from "@images/introImg2.jpg";
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);

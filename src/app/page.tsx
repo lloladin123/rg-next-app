@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import DateIcon from "./components/DateIcon";
+import DateIcon from "./components/Icons/DateIcon";
 import { MdArrowForwardIos } from "react-icons/md";
 
 import "../styles/page.css";

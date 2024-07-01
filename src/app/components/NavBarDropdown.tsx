@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
-import "../../styles/NavBar.css";
+import "@styles/NavBar.css";
 
 interface NavBarDropdownProps {
   text: string;

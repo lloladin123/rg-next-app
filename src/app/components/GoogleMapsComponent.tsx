@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { GoogleMap, Marker, LoadScript } from "@react-google-maps/api";
 import Link from "next/link";
-import GoogleSateliteImg from "../../images/GoogleSatelite.png";
+import GoogleSateliteImg from "@images/GoogleSatelite.png";
 import Image from "next/image";
 
 const containerStyle = {

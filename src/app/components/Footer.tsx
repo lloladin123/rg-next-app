@@ -1,14 +1,14 @@
 import React from "react";
-import FacebookFooterIcon from "./FacebookFooterIcon";
-import dkLogo from "../../images/dk_logo.png";
-import mastercardLogo from "../../images/mastercard_logo.png";
-import visaElectron from "../../images/visa_electron.jpg";
-import visa from "../../images/visa_logo.jpg";
+import FacebookFooterIcon from "@Icons/FacebookFooterIcon";
+import dkLogo from "@images/dk_logo.png";
+import mastercardLogo from "@images/mastercard_logo.png";
+import visaElectron from "@images/visa_electron.jpg";
+import visa from "@images/visa_logo.jpg";
 import Link from "next/link";
-import GoogleMapsComponent from "./GoogleMapsComponent";
+import GoogleMapsComponent from "@components/GoogleMapsComponent";
 import Image from "next/image";
-import InstagramFooterIcon from "./InstagramFooterIcon";
-import "../../styles/Footer.css";
+import InstagramFooterIcon from "@Icons/InstagramFooterIcon";
+import "@styles/Footer.css";
 
 const Footer = () => {
   return (

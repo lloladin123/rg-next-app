@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/HoneycombPattern.css";
+import "@styles/HoneycombPattern.css";
 
 interface HoneycombPatternProp {
   children: React.ReactNode;
