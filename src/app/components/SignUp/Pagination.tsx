@@ -7,20 +7,20 @@ import { IoIosArrowBack } from "react-icons/io";
 const Pagination = () => {
   return (
     <div className="w-full flex flex-row items-center justify-center space-x-2 p-4 mt-2">
-      <button className="bg-gray-500 p-1.5 rounded-xl">
+      <button className="bg-gray-500 p-1.5 rounded-full">
         <div className="text-sm flex flex-row items-center">
           <MdKeyboardDoubleArrowLeft />
           Første
         </div>
       </button>
-      <button className="bg-gray-500 p-1.5 rounded-xl">
+      <button className="bg-gray-500 p-1.5 rounded-full">
         <div className="text-sm flex flex-row items-center">
           <IoIosArrowBack />
           Tilbage
         </div>
       </button>
       <p>Side 1</p>
-      <button className="bg-gray-500 p-1.5 rounded-xl">
+      <button className="bg-gray-500 p-1.5 rounded-full">
         <div className="text-sm flex flex-row items-center">
           Næste
           <IoIosArrowForward />
