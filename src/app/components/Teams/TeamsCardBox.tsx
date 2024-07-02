@@ -145,7 +145,7 @@ const TeamsCardBox: React.FC<TeamsCardBoxProps> = ({
             <p className="font-extralight ml-6">{description}</p>
           </div>
           {/* Button */}
-          <div className="bg-rg-green rounded-xl p-2 mb-2 flex items-center justify-center w-full">
+          <div className="bg-rg-green hover:bg-green-700 duration-300 ease-in-out rounded-xl p-2 mb-2 flex items-center justify-center w-full">
             <button className="">Læse mere & tilmeld</button>
           </div>
         </div>

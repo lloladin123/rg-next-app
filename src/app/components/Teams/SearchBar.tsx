@@ -9,7 +9,7 @@ const SearchBar = () => {
         type="text"
         placeholder="Søg hold fx Barn, Unge osv."
       />
-      <button className="bg-rg-green text-white rounded-r-full flex flex-row items-center rounded-l-none px-2 h-10 focus:border-blue-400 focus:border-4">
+      <button className="bg-rg-green text-white rounded-r-full flex flex-row items-center rounded-l-none px-2 h-10 focus:border-blue-400 focus:border-4 hover:bg-green-700 duration-300 ease-in-out">
         <FaSearch /> <div className="ml-1 text-white">Find hold</div>
       </button>
     </div>
