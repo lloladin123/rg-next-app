@@ -41,28 +41,28 @@ const TeamsCardBox: React.FC<TeamsCardBoxProps> = ({
       {/* Cardbox */}
       <Link
         href="/Team"
-        className="bg-white border shadow-lg rounded-3xl w-full flex flex-row hover:shadow-full duration-300 ease-in-out"
-        style={{ height: "310px" }}
+        className="bg-white border flex flex-col md:flex-row shadow-lg rounded-3xl w-full flex flex-row hover:shadow-full duration-300 ease-in-out"
       >
         {/* Image */}
-        <div className="relative" style={{ width: "350px" }}>
+        <div className="md:w-3/6 h-50 md:h-auto relative">
           <Image
             className="rounded-3xl overflow-hidden"
             alt="holdbillede"
             layout="fill"
+            objectPosition="center"
             objectFit="cover"
             src={cardImage}
           />
         </div>
         {/* Team Information */}
-        <div className="flex flex-col w-full px-4 ml-4 py-2">
+        <div className="flex flex-col w-full md:px-4 md:ml-4 md:py-2">
           {/* Header */}
           <div className="relative p-2">
             <span className="absolute inset-y-0 left-0 w-1 bg-rg-green"></span>
             <h1 className="ml-1 text-xl font-normal">{teamName}</h1>
           </div>
           {/* Basic information */}
-          <div className="flex flex-row w-full justify-between pr-14 p-1">
+          <div className="flex flex-col space-y-3 md-space-y-0 md:flex-row w-full justify-between pr-14 p-1">
             <div>
               <div className="flex flex-row space-x-1 items-center">
                 <div className="text-rg-green">
