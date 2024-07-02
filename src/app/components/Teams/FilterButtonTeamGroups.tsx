@@ -1,6 +1,6 @@
 // FilterButtonTeamGroups.tsx
 import React from "react";
-import SignUpDropdown from "@SignUp/SignUpDropdown";
+import TeamsDropdown from "@Teams/TeamsDropdown";
 import { FaListUl } from "react-icons/fa";
 
 const FilterButtonTeamGroups: React.FC = () => {
@@ -19,7 +19,7 @@ const FilterButtonTeamGroups: React.FC = () => {
   return (
     <div className="w-50 flex flex-row items-center justify-center bg-gray-500 rounded-2xl px-2 space-x-1">
       <FaListUl />
-      <SignUpDropdown menuItems={menuItems} title="Holdgrupper" />
+      <TeamsDropdown menuItems={menuItems} title="Holdgrupper" />
     </div>
   );
 };

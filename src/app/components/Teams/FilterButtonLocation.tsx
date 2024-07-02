@@ -1,5 +1,5 @@
 import React from "react";
-import SignUpDropdown from "@SignUp/SignUpDropdown";
+import TeamsDropdown from "@Teams/TeamsDropdown";
 import { FaMapMarkerAlt } from "react-icons/fa";
 
 const FilterButtonLocation: React.FC = () => {
@@ -23,7 +23,7 @@ const FilterButtonLocation: React.FC = () => {
   return (
     <div className="w-50 flex flex-row items-center justify-center bg-gray-500 rounded-2xl px-2 space-x-1">
       <FaMapMarkerAlt />
-      <SignUpDropdown menuItems={menuItems} title="Lokation" />
+      <TeamsDropdown menuItems={menuItems} title="Lokation" />
     </div>
   );
 };

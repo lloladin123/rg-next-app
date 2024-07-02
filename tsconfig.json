@@ -27,7 +27,7 @@
       "@integrations/*": ["./src/app/components/integrations/*"],
       "@NavBar/*": ["./src/app/components/NavBar/*"],
       "@Index/*": ["./src/app/components/Index/*"],
-      "@SignUp/*": ["./src/app/components/SignUp/*"]
+      "@Teams/*": ["./src/app/components/Teams/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

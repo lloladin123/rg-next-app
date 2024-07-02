@@ -1,9 +1,9 @@
 import React from "react";
-import SearchBar from "@SignUp/SearchBar";
-import FilterButton from "@SignUp/FilterButtons";
-import SignUpCardBox from "@SignUp/SignUpCardBox";
+import SearchBar from "@/app/components/Teams/SearchBar";
+import FilterButton from "@/app/components/Teams/FilterButtons";
+import SignUpCardBox from "@/app/components/Teams/TeamsCardBox";
 import SpringMuseneHold from "@images/SpringmuseneHold.jpeg";
-import Pagination from "../components/SignUp/Pagination";
+import Pagination from "../components/Teams/Pagination";
 
 const SignUp = () => {
   const teamName = "(030) Springmusene (7-10år)";

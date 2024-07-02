@@ -1,5 +1,5 @@
 import React from "react";
-import SignUpDropdown from "@SignUp/SignUpDropdown";
+import TeamsDropdown from "@Teams/TeamsDropdown";
 import { FaUsers } from "react-icons/fa";
 const FilterButtonStatus: React.FC = () => {
   const menuItems = [
@@ -11,7 +11,7 @@ const FilterButtonStatus: React.FC = () => {
   return (
     <div className="w-50 flex flex-row items-center justify-center bg-gray-500 rounded-2xl px-2 space-x-1">
       <FaUsers />
-      <SignUpDropdown menuItems={menuItems} title="PladsStatus" />
+      <TeamsDropdown menuItems={menuItems} title="PladsStatus" />
     </div>
   );
 };

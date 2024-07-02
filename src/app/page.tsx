@@ -82,7 +82,7 @@ export default function Home() {
             Bliv medlem af Roskilde Gymnastikforening i dag
           </h1>
           <Link
-            href="/SignUp"
+            href="/Teams"
             className="hover:opacity-80 flex items-center space-x-1"
           >
             Gå til tilmedling <MdArrowForwardIos color="white" />

@@ -88,7 +88,7 @@ const NavBar = () => {
                 items={[
                   <NavBarDropdownItem
                     key="holdtilmedling"
-                    href="/SignUp"
+                    href="/Teams"
                     text={"Holdtilmedling".toUpperCase()}
                   />,
                   <NavBarDropdownItem

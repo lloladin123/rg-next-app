@@ -7,7 +7,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { IoInformationCircleSharp } from "react-icons/io5";
 
-interface SignUpCardBoxProps {
+interface TeamsCardBoxProps {
   teamName: string;
   age: string;
   price: number;
@@ -19,7 +19,7 @@ interface SignUpCardBoxProps {
   cardImage: string;
 }
 
-const SignUpCardBox: React.FC<SignUpCardBoxProps> = ({
+const TeamsCardBox: React.FC<TeamsCardBoxProps> = ({
   teamName,
   age,
   price,
@@ -154,4 +154,4 @@ const SignUpCardBox: React.FC<SignUpCardBoxProps> = ({
   );
 };
 
-export default SignUpCardBox;
+export default TeamsCardBox;

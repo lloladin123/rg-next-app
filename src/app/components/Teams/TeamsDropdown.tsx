@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SignUpDropdownItem from "@SignUp/SignUpDropdownItem";
+import SignUpDropdownItem from "@/app/components/Teams/TeamsDropdownItem";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import FilterTimeInput from "./FilterTimeInput";
 
