@@ -69,7 +69,7 @@ const TeamsDropDown: React.FC<TeamsDropDownProps> = ({
         <div>
           {isOpen && (
             <div className="absolute">
-              <ul className="text-black bg-white pr-5 min-w-60 p-2 border rounded top-0 mt-1 -ml-7 relative whitespace-nowrap">
+              <ul className="z-10 text-black bg-white pr-5 min-w-60 p-2 border rounded top-0 mt-1 -ml-7 relative whitespace-nowrap">
                 {menuItems.map((item, index) => (
                   <TeamsDropdownItem
                     key={index}
@@ -87,7 +87,7 @@ const TeamsDropDown: React.FC<TeamsDropDownProps> = ({
         <div>
           {isOpen && (
             <div className="absolute">
-              <ul className="text-black grid grid-cols-2 gap-x-9 bg-white pr-5 min-w-60 p-2 top-0 mt-1 border rounded top-0 -ml-7 relative whitespace-nowrap">
+              <ul className="z-10 text-black grid grid-cols-2 gap-x-9 bg-white pr-5 min-w-60 p-2 top-0 mt-1 border rounded top-0 -ml-7 relative whitespace-nowrap">
                 <li className="col-span-2">
                   <FilterTimeInput />
                 </li>
