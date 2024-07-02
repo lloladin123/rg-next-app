@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 import Link from "next/link";
 import { FaRegCalendarDays } from "react-icons/fa6";
@@ -16,7 +16,7 @@ interface TeamsCardBoxProps {
   instructors: string[];
   instructorsAid: string[];
   description: string;
-  cardImage: string;
+  cardImage: StaticImageData;
 }
 
 const TeamsCardBox: React.FC<TeamsCardBoxProps> = ({
