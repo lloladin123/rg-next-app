@@ -18,7 +18,7 @@ const Teams = () => {
   const cardImage = SpringMuseneHold;
   return (
     <div className="flex bg-white flex-col items-center w-full">
-      <div className="w-4/6 md:w-5/6 mt-4">
+      <div className="w-full p-3 sm:p-0 md:w-5/6 mt-4">
         <SearchBar />
         <div className="relative z-10">
           <FilterButton />
