@@ -27,7 +27,8 @@
       "@integrations/*": ["./src/app/components/integrations/*"],
       "@NavBar/*": ["./src/app/components/NavBar/*"],
       "@Index/*": ["./src/app/components/Index/*"],
-      "@Teams/*": ["./src/app/components/Teams/*"]
+      "@Teams/*": ["./src/app/components/Teams/*"],
+      "@Team/*": ["./src/app/components/Team/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
