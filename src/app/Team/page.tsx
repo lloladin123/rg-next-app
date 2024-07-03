@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import Springmusene from "@images/SpringmuseneHold.jpeg";
 import Alexander from "@images/Alexander.jpg";
+import Kim from "@images/Kim.jpg";
 import { FaRegCalendarDays } from "react-icons/fa6";
 import { FaRegMoneyBillAlt } from "react-icons/fa";
 import { IoIosCheckmark } from "react-icons/io";
@@ -14,6 +15,7 @@ import { FaUnlock } from "react-icons/fa";
 import "@styles/Team.css";
 
 import Link from "next/link";
+import InstructorCard from "../components/Team/InstructorCard";
 
 const Team = () => {
   return (
@@ -169,7 +171,7 @@ const Team = () => {
           <div className="border-b py-2">
             <div className="relative flex flex-row space-x-3">
               <span className="absolute inset-y-0 left-0 w-1 bg-rg-green z-0"></span>
-              <p>Pris: 2.150,00 Dkk</p>
+              <p className="text-2xl">Pris: 2.150,00 Dkk</p>
             </div>
           </div>
           <div className="flex flex-row mt-4 space-x-1">
@@ -191,19 +193,9 @@ const Team = () => {
         </div>
         <div className="flex flex-col mt-16">
           <div className="flex flex-row space-x-2">
-            <div className="flex flex-row space-x-2  border shadow-xl mb-2 rounded-xl overflow-hidden w-1/4">
-              <div className="flex flex-col">
-                <Image
-                  className="w-full hexagon"
-                  alt="Instruktør Alexander"
-                  src={Alexander}
-                />
-                <div className="p-4 mt-4">
-                  <p>Alexander Thøgersen</p>
-                  <p>Instruktør</p>
-                </div>
-              </div>
-            </div>
+            <InstructorCard name="Alexander Thøgersen" image={Alexander} />
+            <InstructorCard name="Kim Lauer" image={Kim} />
+            <InstructorCard name="Frida Mandrup" isHelper={true} />
           </div>
         </div>
       </div>

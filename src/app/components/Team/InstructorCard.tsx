@@ -1,0 +1,41 @@
+import Image from "next/image";
+import { StaticImageData } from "next/image";
+import React from "react";
+import EmptyInstructor from "@images/EmptyInstructor.png";
+
+interface InstructorCardProps {
+  name: string;
+  isHelper?: boolean;
+  image?: StaticImageData;
+}
+
+const InstructorCard: React.FC<InstructorCardProps> = ({
+  name,
+  isHelper = false,
+  image,
+}) => {
+  return (
+    <div className="flex flex-row space-x-2 border shadow-xl mb-2 rounded-xl overflow-hidden w-1/4">
+      <div className="relative w-full flex flex-col">
+        <div
+          className="hexagon relative overflow-hidden"
+          style={{ height: "300px" }}
+        >
+          <Image
+            src={image ? image.src : EmptyInstructor}
+            alt={name}
+            layout="fill"
+            objectFit="cover"
+            className="object-cover"
+          />
+        </div>
+        <div className="p-4 mt-4">
+          <p>{name}</p>
+          {isHelper ? <p>HjælpeInstruktør</p> : <p>Instruktør</p>}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default InstructorCard;
