@@ -60,14 +60,14 @@ const TeamPage: React.FC<TeamPageProps> = ({
                     <FaRegCalendarDays className="text-rg-green mt-1" />
                     <p>Alder: </p>
                   </div>
-                  <p className="font-light">{age}</p>
+                  <p className="font-extralight">{age}</p>
                 </div>
                 <div className="flex flex-row w-full space-x-32">
                   <div className="flex flex-row space-x-1">
                     <FaRegMoneyBillAlt className="text-rg-green mt-1" />
                     <p>Pris: </p>
                   </div>
-                  <p className="font-light">{price}</p>
+                  <p className="font-extralight">{price}</p>
                 </div>
                 <div className="flex flex-row space-x-1">
                   <Link
@@ -89,13 +89,13 @@ const TeamPage: React.FC<TeamPageProps> = ({
               <div className="flex flex-col space-y-2 w-full lg:w-3/5 p-2">
                 <div className="flex flex-row space-x-2">
                   <FaRegCalendarDays className="text-rg-green mt-1" />
-                  <p className="font-light">{dateFromTo}</p>
+                  <p className="font-extralight">{dateFromTo}</p>
                 </div>
                 <div className="flex flex-row space-x-2">
                   <FaMapMarkerAlt className="text-rg-green mt-1" />
                   <div className="flex flex-col">
                     <p>Kildegårdshallen (Hallen)</p>
-                    <p className="font-light">{day}</p>
+                    <p className="font-extralight">{day}</p>
                   </div>
                 </div>
                 <div className="flex flex-row space-x-2">
@@ -104,7 +104,7 @@ const TeamPage: React.FC<TeamPageProps> = ({
                     <p>Instruktører</p>
                     {instructors.map((instructor, index) => (
                       <div key={index}>
-                        <p className="font-light">
+                        <p className="font-extralight">
                           {instructor.isHelper == false ? instructor.name : ""}
                         </p>
                       </div>
@@ -117,7 +117,7 @@ const TeamPage: React.FC<TeamPageProps> = ({
                     <p>HjælpeInstruktører</p>
                     {instructors.map((instructor, index) => (
                       <div key={index}>
-                        <p className="font-light">
+                        <p className="font-extralight">
                           {instructor.isHelper ? instructor.name : ""}
                         </p>
                       </div>
@@ -132,7 +132,7 @@ const TeamPage: React.FC<TeamPageProps> = ({
           <IoInformationCircleSharp className="text-rg-green mt-1 w-12" />
           <div className="flex flex-col">
             <p>Beskrivelse</p>
-            <div className="font-light">
+            <div className="font-extralight">
               <p className="flex flex-col space-y-2">
                 {description.map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
