@@ -98,20 +98,32 @@ const TeamPage: React.FC<TeamPageProps> = ({
                     <p className="font-light">{day}</p>
                   </div>
                 </div>
-
-                {instructors.map((instructor, index) => (
-                  <div key={index} className="flex flex-row space-x-2">
-                    <FaUser className="text-rg-green mt-1" />
-                    <div className="flex flex-col">
-                      <p>
-                        {instructor.isHelper
-                          ? "Hjælpeinstruktør"
-                          : "Instruktør"}
-                      </p>
-                      <p className="font-light">{instructor.name}</p>
-                    </div>
+                <div className="flex flex-row space-x-2">
+                  <FaUser className="text-rg-green mt-1" />
+                  <div className="flex flex-col">
+                    <p>Instruktører</p>
+                    {instructors.map((instructor, index) => (
+                      <div key={index}>
+                        <p className="font-light">
+                          {instructor.isHelper == false ? instructor.name : ""}
+                        </p>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
+                <div className="flex flex-row space-x-2">
+                  <FaUser className="text-rg-green mt-1" />
+                  <div className="flex flex-col">
+                    <p>HjælpeInstruktører</p>
+                    {instructors.map((instructor, index) => (
+                      <div key={index}>
+                        <p className="font-light">
+                          {instructor.isHelper ? instructor.name : ""}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>

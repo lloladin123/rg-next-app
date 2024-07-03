@@ -14,7 +14,7 @@ const Team = () => {
       instructors={[
         { name: "Alexander Thøgersen", isHelper: false, image: Alexander },
         { name: "Kim Lauer", isHelper: false, image: Kim },
-        { name: "Frida Mandrup", isHelper: false },
+        { name: "Frida Mandrup", isHelper: true },
       ]}
       description={[
         "Holdet er for både piger og drenge i alderen 7-10 år. Der er plads til alle - både begyndere og øvede.",
