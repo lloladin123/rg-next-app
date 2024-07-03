@@ -35,7 +35,7 @@ const TeamPage: React.FC<TeamPageProps> = ({
   description,
 }) => {
   return (
-    <div className="w-full md:w-8/12 lg:w-10/12 flex flex-col mx-auto">
+    <div className="w-full md:w-11/12 lg:w-10/12 flex flex-col mx-auto">
       <div className="mt-4">
         <div className="flex flex-col lg:flex-row">
           <div className="w-full lg:w-3/6 h-60 lg:h-auto relative overflow-hidden ">
