@@ -20,10 +20,7 @@ export default function Home() {
         <div className="flex lg:flex-row flex-col">
           <div className="lg:flex-1 text-gray-900 p-6 bg-white">
             <h1 className="text-xl font-bold mb-4">Nyheder</h1>
-            <Link
-              href="/"
-              className="block rounded-lg shadow-md p-4 mb-4 hover-parent"
-            >
+            <div className="block rounded-lg shadow-md p-4 mb-4 hover-parent">
               <h2 className="text-lg text-rg-green font-semibold">
                 Info. om sæson 2024/2025
               </h2>
@@ -31,12 +28,11 @@ export default function Home() {
               <p className="mt-1">
                 Kære besøgende på gymnastikforeningens hjemmeside.
               </p>
-              <p className="text-rg-green">Læs mere...</p>
-            </Link>
-            <Link
-              href="/"
-              className="block rounded-lg shadow-md p-4 mb-4 hover-parent"
-            >
+              <Link href="/" className="text-rg-green">
+                Læs mere...
+              </Link>
+            </div>
+            <div className="block rounded-lg shadow-md p-4 mb-4 hover-parent">
               <h2 className="text-lg text-rg-green font-semibold">
                 Info. om sæson 2024/2025
               </h2>
@@ -44,8 +40,10 @@ export default function Home() {
               <p className="mt-1">
                 Kære besøgende på gymnastikforeningens hjemmeside.
               </p>
-              <p className="text-rg-green">Læs mere...</p>
-            </Link>
+              <Link href="/" className="text-rg-green">
+                Læs mere...
+              </Link>
+            </div>
           </div>
           <div className="lg:flex-1 text-gray-900 p-6 bg-white">
             <h1 className="text-xl font-bold mb-4">Arrangementer</h1>

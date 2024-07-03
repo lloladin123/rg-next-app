@@ -39,10 +39,7 @@ const TeamsCardBox: React.FC<TeamsCardBoxProps> = ({
   return (
     <>
       {/* Cardbox */}
-      <Link
-        href="/Team"
-        className="bg-white border flex flex-col lg:flex-row shadow-lg rounded-3xl w-full flex flex-row hover:shadow-full duration-300 ease-in-out"
-      >
+      <div className="bg-white border flex flex-col lg:flex-row shadow-lg rounded-3xl w-full hover:shadow-full duration-300 ease-in-out">
         {/* Image */}
         <div className="lg:w-3/6 h-50 lg:h-auto relative">
           <Image
@@ -64,33 +61,33 @@ const TeamsCardBox: React.FC<TeamsCardBoxProps> = ({
           {/* Basic information */}
           <div className="flex flex-col space-y-3 lg:space-y-0 lg:flex-row w-full justify-between pr-14 p-1">
             <div>
-              <div className="flex flex-row space-x-1 items-center">
+              <div className="flex flex-row space-x-1 p-1 items-center">
                 <div className="text-rg-green">
                   <FaRegCalendarDays />
                 </div>
-                <div className="flex flex-row space-x-1">
+                <div className="flex flex-row space-x-1 p-1">
                   <p>Alder:</p>
                   <p className="font-extralight">{age}</p>
                 </div>
               </div>
-              <div className="flex flex-row space-x-1 items-center">
+              <div className="flex flex-row space-x-1 p-1 items-center">
                 <div className="text-rg-green">
                   <FaRegMoneyBillAlt />
                 </div>
-                <div className="flex flex-row space-x-1">
-                  <p>pris:</p>
+                <div className="flex flex-row space-x-1 p-1">
+                  <p className="">pris:</p>
                   <p className="font-extralight">{price} dkk</p>
                 </div>
               </div>
             </div>
             <div>
-              <div className="flex flex-row space-x-1 items-center">
+              <div className="flex flex-row space-x-1 p-1 items-center">
                 <div className="text-rg-green">
                   <FaRegCalendarDays />
                 </div>
                 <p className="font-extralight">{dateRange}</p>
               </div>
-              <div className="flex flex-row space-x-1">
+              <div className="flex flex-row space-x-1 p-1">
                 <div className="text-rg-green">
                   <FaMapMarkerAlt />
                 </div>
@@ -102,7 +99,7 @@ const TeamsCardBox: React.FC<TeamsCardBoxProps> = ({
             </div>
             <div>
               <div className="flex flex-col space-y-1 lg:space-y-0">
-                <div className="flex flex-row space-x-1 items-center">
+                <div className="flex flex-row space-x-1 p-1 items-center">
                   <div className="text-rg-green mt-1">
                     <FaUser />
                   </div>
@@ -118,7 +115,7 @@ const TeamsCardBox: React.FC<TeamsCardBoxProps> = ({
               </div>
 
               <div className="flex flex-col space-y-1 lg-space-y-0">
-                <div className="flex flex-row space-x-1 items-center">
+                <div className="flex flex-row space-x-1 p-1 items-center">
                   <div className="text-rg-green mt-1">
                     <FaUser />
                   </div>
@@ -145,11 +142,16 @@ const TeamsCardBox: React.FC<TeamsCardBoxProps> = ({
             <p className="font-extralight ml-6">{description}</p>
           </div>
           {/* Button */}
-          <div className="bg-rg-green hover:bg-green-700 duration-300 ease-in-out rounded-xl p-2 mb-2 flex items-center justify-center w-full">
-            <button className="">Læse mere & tilmeld</button>
+          <div>
+            <Link
+              className="bg-rg-green hover:bg-green-700 duration-300 ease-in-out rounded-xl p-2 mb-2 flex items-center justify-center w-full"
+              href="/Team"
+            >
+              Læse mere & tilmeld
+            </Link>
           </div>
         </div>
-      </Link>
+      </div>
     </>
   );
 };
