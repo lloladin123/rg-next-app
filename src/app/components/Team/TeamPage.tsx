@@ -35,10 +35,10 @@ const TeamPage: React.FC<TeamPageProps> = ({
   description,
 }) => {
   return (
-    <div className="w-11/12 flex flex-col mx-auto">
+    <div className="w-8/12 lg:w-10/12 flex flex-col mx-auto">
       <div className="mt-4">
-        <div className="flex flex-row">
-          <div className="w-3/6 relative overflow-hidden ">
+        <div className="flex flex-col lg:flex-row">
+          <div className="w-full lg:w-3/6 h-60 lg:h-auto relative overflow-hidden ">
             <Image
               className=""
               alt="Springmusenebillede"
@@ -49,12 +49,12 @@ const TeamPage: React.FC<TeamPageProps> = ({
             />
           </div>
           <div className="flex flex-col w-full p-2">
-            <div className="relative   flex flex-row space-x-3 items-center">
+            <div className="relative flex flex-row space-x-3 items-center">
               <span className="absolute inset-y-0 left-0 w-1 bg-rg-green z-0"></span>
               <h1 className="text-xl font-normal">{title}</h1>
             </div>
-            <div className="flex flex-row">
-              <div className="flex flex-col p-2 space-y-1 w-full ">
+            <div className="flex flex-col lg:flex-row">
+              <div className="flex flex-col p-2 space-y-1 w-full lg:w-4/5 w-full ">
                 <div className="flex flex-row w-full space-x-32">
                   <div className="flex flex-row space-x-1">
                     <FaRegCalendarDays className="text-rg-green mt-1" />
@@ -86,7 +86,7 @@ const TeamPage: React.FC<TeamPageProps> = ({
                   <RxQuestionMarkCircled className="mt-2 text-black rounded-full hover:text-white hover:bg-rg-green duration-300 ease-in-out" />
                 </div>
               </div>
-              <div className="flex flex-col space-y-2 w-full p-2">
+              <div className="flex flex-col space-y-2 w-full lg:w-3/5 p-2">
                 <div className="flex flex-row space-x-2">
                   <FaRegCalendarDays className="text-rg-green mt-1" />
                   <p className="font-light">{dateFromTo}</p>
@@ -155,7 +155,7 @@ const TeamPage: React.FC<TeamPageProps> = ({
           </div>
         </div>
         <div className="flex flex-col mt-16 mb-16">
-          <div className="flex flex-row space-x-5">
+          <div className="flex flex-col lg:flex-row space-x-0 lg:space-x-5">
             {instructors.map((instructor, index) => (
               <InstructorCard
                 key={index}

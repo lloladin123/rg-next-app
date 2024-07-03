@@ -15,7 +15,7 @@ const InstructorCard: React.FC<InstructorCardProps> = ({
   image,
 }) => {
   return (
-    <div className="flex flex-row space-x-2 border shadow-xl mb-2 rounded-xl overflow-hidden w-1/4">
+    <div className="flex flex-row space-x-2 border shadow-xl mb-2 rounded-xl overflow-hidden w-full lg:w-1/4">
       <div className="relative w-full flex flex-col">
         <div
           className="hexagon relative overflow-hidden"
