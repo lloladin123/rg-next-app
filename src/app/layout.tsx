@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header></Header>
-        {children}
+        <div className="bg-white">{children}</div>
         <Footer></Footer>
       </body>
     </html>
