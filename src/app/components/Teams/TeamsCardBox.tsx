@@ -63,7 +63,7 @@ const TeamsCardBox: React.FC<TeamsCardBoxProps> = ({
           <div className="flex flex-col space-y-3 lg:space-y-0 lg:flex-row w-full justify-between pr-14 p-1">
             <div>
               {/* age */}
-              <div className="flex flex-row space-x-1 p-1 items-center">
+              <div className="flex flex-row p-1 items-center">
                 <div className="text-rg-green">
                   <FaChildren />
                 </div>
@@ -73,7 +73,7 @@ const TeamsCardBox: React.FC<TeamsCardBoxProps> = ({
                 </div>
               </div>
               {/* price */}
-              <div className="flex flex-row space-x-1 p-1 items-center">
+              <div className="flex flex-row p-1 items-center">
                 <div className="text-rg-green">
                   <FaRegMoneyBillAlt className="mt-1" />
                 </div>
@@ -94,7 +94,7 @@ const TeamsCardBox: React.FC<TeamsCardBoxProps> = ({
               {/* Location */}
               <div className="flex flex-row space-x-1 p-1">
                 <div className="text-rg-green">
-                  <FaMapMarkerAlt className="mt-1" />
+                  <FaMapMarkerAlt className="" />
                 </div>
                 <div className="flex flex-col">
                   <p>{location}</p>
