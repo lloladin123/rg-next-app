@@ -41,7 +41,7 @@ const TeamPage: React.FC<TeamPageProps> = ({
         <div>
           <div className="flex flex-col lg:flex-row">
             {/* Image */}
-            <div className="w-full clip-hexagon lg:w-3/6 h-60 lg:h-auto relative overflow-hidden ">
+            <div className="w-full lg:w-3/6 h-60 lg:h-auto relative overflow-hidden ">
               <Image
                 className=""
                 alt="Springmusenebillede"

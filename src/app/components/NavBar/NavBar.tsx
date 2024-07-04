@@ -121,7 +121,7 @@ const NavBar = () => {
                   />,
                   <NavBarDropdownItem
                     key="bestyrelse og instruktører"
-                    href="/Employees"
+                    href="/Contacts"
                     text={"Bestyrelse og Instruktører".toUpperCase()}
                   />,
                 ]}
