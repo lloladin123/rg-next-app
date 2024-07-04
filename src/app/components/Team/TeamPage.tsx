@@ -11,7 +11,6 @@ import { IoInformationCircleSharp } from "react-icons/io5";
 import { FaChildren } from "react-icons/fa6";
 import { FaUserPlus } from "react-icons/fa";
 import { FaUnlock } from "react-icons/fa";
-import "@styles/Team.css";
 
 import Link from "next/link";
 import InstructorCard from "@Team/InstructorCard";
@@ -42,7 +41,7 @@ const TeamPage: React.FC<TeamPageProps> = ({
         <div>
           <div className="flex flex-col lg:flex-row">
             {/* Image */}
-            <div className="w-full lg:w-3/6 h-60 lg:h-auto relative overflow-hidden ">
+            <div className="w-full clip-hexagon lg:w-3/6 h-60 lg:h-auto relative overflow-hidden ">
               <Image
                 className=""
                 alt="Springmusenebillede"

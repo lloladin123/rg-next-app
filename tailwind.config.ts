@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { PluginAPI } from "tailwindcss/types/config";
 
 const config: Config = {
   content: [
@@ -28,9 +29,17 @@ const config: Config = {
       },
       boxShadow: {
         'full': '1px 1px 5px 5px rgba(0, 0, 0, 0.3)', // Customize as needed
-      },
+      },      
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addUtilities }: PluginAPI) {
+      addUtilities({
+        '.clip-hexagon': {
+          'clip-path': 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
+        },
+      });
+    },
+  ],
 };
 export default config;

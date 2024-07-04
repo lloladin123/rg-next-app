@@ -19,7 +19,7 @@ const InstructorCard: React.FC<InstructorCardProps> = ({
       <div className="relative w-full flex flex-col">
         {/* Image */}
         <div
-          className="hexagon relative overflow-hidden"
+          className="clip-hexagon relative overflow-hidden"
           style={{ height: "300px" }}
         >
           <Image
