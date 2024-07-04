@@ -8,6 +8,7 @@ import { RxQuestionMarkCircled } from "react-icons/rx";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { IoInformationCircleSharp } from "react-icons/io5";
+import { FaChildren } from "react-icons/fa6";
 import { FaUserPlus } from "react-icons/fa";
 import { FaUnlock } from "react-icons/fa";
 import "@styles/Team.css";
@@ -63,7 +64,7 @@ const TeamPage: React.FC<TeamPageProps> = ({
                   {/* Age */}
                   <div className="flex flex-row w-full space-x-32">
                     <div className="flex flex-row space-x-1">
-                      <FaRegCalendarDays className="text-rg-green mt-1" />
+                      <FaChildren className="text-rg-green mt-1" />
                       <p>Alder: </p>
                     </div>
                     <p className="font-extralight">{age}</p>

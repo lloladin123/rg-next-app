@@ -5,6 +5,7 @@ import { FaRegCalendarDays } from "react-icons/fa6";
 import { FaRegMoneyBillAlt } from "react-icons/fa";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
+import { FaChildren } from "react-icons/fa6";
 import { IoInformationCircleSharp } from "react-icons/io5";
 
 interface TeamsCardBoxProps {
@@ -64,7 +65,7 @@ const TeamsCardBox: React.FC<TeamsCardBoxProps> = ({
               {/* age */}
               <div className="flex flex-row space-x-1 p-1 items-center">
                 <div className="text-rg-green">
-                  <FaRegCalendarDays />
+                  <FaChildren />
                 </div>
                 <div className="flex flex-row space-x-1 p-1">
                   <p>Alder:</p>
@@ -105,27 +106,25 @@ const TeamsCardBox: React.FC<TeamsCardBoxProps> = ({
               {/* Instructors */}
               <div className="flex flex-col space-y-1 lg:space-y-0">
                 <div className="flex flex-row space-x-1 p-1 items-center">
-                  <div className="text-rg-green mt-1">
-                    <FaUser />
-                  </div>
-                  <div className="flex flex-col">
-                    <p>Instruktør</p>
-                    {instructors.map((instructor, index) => (
-                      <p key={index} className="font-extralight">
-                        {instructor}
-                      </p>
-                    ))}
+                  <div className="flex flex-row space-x-1">
+                    <FaUser className="text-rg-green mt-1" />
+                    <div className="flex flex-col">
+                      <p>Instruktører</p>
+                      {instructors.map((instructor, index) => (
+                        <p key={index} className="font-extralight">
+                          {instructor}
+                        </p>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
               {/* Helpers */}
               <div className="flex flex-col space-y-1 lg-space-y-0">
-                <div className="flex flex-row space-x-1 p-1 items-center">
-                  <div className="text-rg-green mt-1">
-                    <FaUser />
-                  </div>
+                <div className="flex flex-row space-x-1 p-1">
+                  <FaUser className="text-rg-green mt-1" />
                   <div className="flex flex-col">
-                    <p>Hjælpe Instruktør</p>
+                    <p>Hjælpe Instruktører</p>
                     {instructorsAid.map((aid, index) => (
                       <p className="font-extralight" key={index}>
                         {aid}
