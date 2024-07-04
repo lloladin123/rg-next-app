@@ -116,7 +116,7 @@ const NavBar = () => {
                   />,
                   <NavBarDropdownItem
                     key="udvalg"
-                    href="/"
+                    href="/SelectionCommittee"
                     text={"Udvalg".toUpperCase()}
                   />,
                   <NavBarDropdownItem
