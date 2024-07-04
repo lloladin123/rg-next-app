@@ -23,6 +23,10 @@ const Contacts = () => {
           name="Alexander Thøgersen"
           description="Jeg blev inviteret ned og hjælpe af en af mine venner, i sæsonen 2018/19, på et par hold der"
         />
+        <InstructorBox
+          name="Alexander Thøgersen"
+          description="Jeg blev inviteret ned og hjælpe af en af mine venner, i sæsonen 2018/19, på et par hold der"
+        />
       </div>
     </div>
   );

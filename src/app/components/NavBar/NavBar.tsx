@@ -98,7 +98,7 @@ const NavBar = () => {
                   />,
                   <NavBarDropdownItem
                     key="events"
-                    href="/"
+                    href="/Events"
                     text={"Events".toUpperCase()}
                   />,
                 ]}
