@@ -50,7 +50,7 @@ const Contacts = () => {
               2018/19, på et par hold der
             </p>
             {/* More information button */}
-            <button className="flex flex-row space-x-1 p-1 items-center flex-nowrap w-2/12 bg-rg-green rounded-2xl hover:opacity-50 duration-300 ease-in-out">
+            <button className="flex flex-row space-x-1 p-1 items-center justify-center flex-nowrap w-2/12 bg-rg-green rounded-2xl hover:opacity-50 duration-300 ease-in-out">
               <div className="text-sm">Mere info</div>
               <MdKeyboardArrowDown className="bg-white rounded-full text-rg-green scale-90" />
             </button>
