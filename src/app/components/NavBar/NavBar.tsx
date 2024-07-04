@@ -111,7 +111,7 @@ const NavBar = () => {
                 items={[
                   <NavBarDropdownItem
                     key="kontaktpersoner"
-                    href="/"
+                    href="/ContactPersonal"
                     text={"Kontaktpersoner".toUpperCase()}
                   />,
                   <NavBarDropdownItem

@@ -20,6 +20,7 @@ const config: Config = {
       colors: {
         'calendar-blue': '#3182ce',
         'rg-green' :' #1E6873',
+        'link-hover' : '#3182ce'
       },
       screens: {
         'sm': '640px',
