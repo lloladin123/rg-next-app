@@ -53,7 +53,7 @@ const TeamsCardBox: React.FC<TeamsCardBoxProps> = ({
         </div>
         {/* Team Information */}
         <div className="flex flex-col w-full lg:px-4 lg:ml-4 lg:py-2">
-          {/* Header */}
+          {/* Team Name */}
           <div className="relative p-2">
             <span className="absolute inset-y-0 left-0 w-1 bg-rg-green"></span>
             <h1 className="ml-1 text-xl font-normal">{teamName}</h1>
@@ -61,6 +61,7 @@ const TeamsCardBox: React.FC<TeamsCardBoxProps> = ({
           {/* Basic information */}
           <div className="flex flex-col space-y-3 lg:space-y-0 lg:flex-row w-full justify-between pr-14 p-1">
             <div>
+              {/* age */}
               <div className="flex flex-row space-x-1 p-1 items-center">
                 <div className="text-rg-green">
                   <FaRegCalendarDays />
@@ -70,6 +71,7 @@ const TeamsCardBox: React.FC<TeamsCardBoxProps> = ({
                   <p className="font-extralight">{age}</p>
                 </div>
               </div>
+              {/* price */}
               <div className="flex flex-row space-x-1 p-1 items-center">
                 <div className="text-rg-green">
                   <FaRegMoneyBillAlt />
@@ -81,12 +83,14 @@ const TeamsCardBox: React.FC<TeamsCardBoxProps> = ({
               </div>
             </div>
             <div>
+              {/* Date */}
               <div className="flex flex-row space-x-1 p-1 items-center">
                 <div className="text-rg-green">
                   <FaRegCalendarDays />
                 </div>
                 <p className="font-extralight">{dateRange}</p>
               </div>
+              {/* Location */}
               <div className="flex flex-row space-x-1 p-1">
                 <div className="text-rg-green">
                   <FaMapMarkerAlt />
@@ -98,6 +102,7 @@ const TeamsCardBox: React.FC<TeamsCardBoxProps> = ({
               </div>
             </div>
             <div>
+              {/* Instructors */}
               <div className="flex flex-col space-y-1 lg:space-y-0">
                 <div className="flex flex-row space-x-1 p-1 items-center">
                   <div className="text-rg-green mt-1">
@@ -113,7 +118,7 @@ const TeamsCardBox: React.FC<TeamsCardBoxProps> = ({
                   </div>
                 </div>
               </div>
-
+              {/* Helpers */}
               <div className="flex flex-col space-y-1 lg-space-y-0">
                 <div className="flex flex-row space-x-1 p-1 items-center">
                   <div className="text-rg-green mt-1">

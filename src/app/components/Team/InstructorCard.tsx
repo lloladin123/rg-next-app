@@ -17,6 +17,7 @@ const InstructorCard: React.FC<InstructorCardProps> = ({
   return (
     <div className="flex flex-row space-x-2 border shadow-xl mb-2 rounded-xl overflow-hidden w-full lg:w-1/4">
       <div className="relative w-full flex flex-col">
+        {/* Image */}
         <div
           className="hexagon relative overflow-hidden"
           style={{ height: "300px" }}
@@ -29,6 +30,7 @@ const InstructorCard: React.FC<InstructorCardProps> = ({
             className="object-cover"
           />
         </div>
+        {/* Name and title */}
         <div className="p-4 mt-4">
           <p>{name}</p>
           {isHelper ? <p>HjælpeInstruktør</p> : <p>Instruktør</p>}
