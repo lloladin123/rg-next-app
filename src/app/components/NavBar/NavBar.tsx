@@ -58,6 +58,7 @@ const NavBar = () => {
       <nav className="lg:flex lg:items-center lg:justify-between">
         <div className="">
           <div className="text-xl font-bold">Logo</div>
+          {/* Mobile menu */}
           <div className="lg:hidden">
             <button
               onClick={toggleMenu}
@@ -67,6 +68,7 @@ const NavBar = () => {
             </button>
           </div>
         </div>
+        {/* Navbar */}
         <ul
           ref={dropdownRef}
           className={`lg:mt-0 mt-4 p-8 space-x-1 space-y-8 lg:bg-transparent absolute lg:relative flex flex-row justify-between lg:items-center lg:py-4 lg:px-8 ${
@@ -79,10 +81,13 @@ const NavBar = () => {
             left: 0,
           }}
         >
+          {/* List elements */}
           <div className="w-1/4 flex flex-col lg:space-x-3 justify-between lg:space-y-0 lg:flex-row">
+            {/* Front page */}
             <li>
               <NavBarLink href="/" text={"Forside".toUpperCase()} />
             </li>
+            {/* Teams and events */}
             <li>
               <NavBarDropdown
                 items={[
@@ -100,6 +105,7 @@ const NavBar = () => {
                 text={"Tilmelding".toUpperCase()}
               />
             </li>
+            {/* Contact */}
             <li>
               <NavBarDropdown
                 items={[
@@ -122,6 +128,7 @@ const NavBar = () => {
                 text={"Kontakt".toUpperCase()}
               />
             </li>
+            {/* Info */}
             <li>
               <NavBarDropdown
                 items={[
@@ -154,6 +161,7 @@ const NavBar = () => {
                 text={"Info".toUpperCase()}
               />
             </li>
+            {/* Images and videos */}
             <li>
               <NavBarDropdown
                 items={[
@@ -166,16 +174,20 @@ const NavBar = () => {
                 text={"Billeder og Videor".toUpperCase()}
               />
             </li>
+            {/* Roskilde Festival */}
             <li>
               <NavBarLink href="/" text={"Roskilde Festival".toUpperCase()} />
             </li>
+            {/* Create user */}
             <li>
               <NavBarLink href="/" text={"Opret Profil".toUpperCase()} />
             </li>
+            {/* Login */}
             <li>
               <NavBarLink href="/" text={"Login".toUpperCase()} />
             </li>
           </div>
+          {/* Mobile Image */}
           <div className="w-3/4 sm:block hidden lg:hidden">
             <Image
               className="h-full w-full object-center object-cover"

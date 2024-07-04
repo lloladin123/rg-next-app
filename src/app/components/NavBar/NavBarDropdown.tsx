@@ -28,10 +28,6 @@ const NavBarDropdown: React.FC<NavBarDropdownProps> = ({ text, items }) => {
     };
   }, []);
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
-
   const handleMouseEnter = () => {
     if (window.innerWidth >= 1024) {
       setIsOpen(true);
@@ -63,6 +59,7 @@ const NavBarDropdown: React.FC<NavBarDropdownProps> = ({ text, items }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
+      {/* Open dropdown button */}
       <button
         className="text-gray-600 font-semibold text-sm hover:text-gray-500 flex items-center hover:underline-green whitespace-nowrap"
         onClick={handleClick}
@@ -74,6 +71,7 @@ const NavBarDropdown: React.FC<NavBarDropdownProps> = ({ text, items }) => {
         <span className="-my-2 absolute inset-x-0 bottom-0 h-0.5 bg-rg-green underline-green"></span>
       </button>
 
+      {/* Dropdown Menu */}
       {isOpen && (
         <div
           className="absolute z-10  flex flex-col items-center lg:group-hover:block"
