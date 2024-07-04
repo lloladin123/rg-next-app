@@ -53,6 +53,7 @@ const IntroBox = () => {
     <div className="mx-auto">
       {/* First Row */}
       <div className="flex flex-col md:flex-row">
+        {/* Image */}
         <div ref={firstImage} className="w-full md:w-1/2">
           <Image
             className="h-full w-full object-center object-cover"
@@ -60,6 +61,7 @@ const IntroBox = () => {
             src={introImg1}
           />
         </div>
+        {/* Description */}
         <div className="w-full md:w-1/2 bg-white p-8 text-sm text-black flex-grow">
           <div className="" ref={firstrefdiv}>
             <p>Gymnastik og motion for hele familien!</p>
@@ -90,6 +92,7 @@ const IntroBox = () => {
 
       {/* Second Row */}
       <div className="flex md:flex-row flex-col-reverse">
+        {/* Description */}
         <div className="w-full md:w-1/2 bg-white p-8 text-sm text-black">
           <div ref={secondrefdiv}>
             <p className="">
@@ -137,6 +140,7 @@ const IntroBox = () => {
             </p>
           </div>
         </div>
+        {/* Image */}
         <div className="w-full md:w-1/2" ref={secondImage}>
           <Image
             className="h-full w-full object-center object-cover"
@@ -148,6 +152,7 @@ const IntroBox = () => {
 
       {/* Third Row */}
       <div className="flex flex-col md:flex-row">
+        {/* Image */}
         <div className="w-full md:w-1/2" ref={thirdImage}>
           <Image
             className="h-full w-full object-center object-cover"
@@ -155,6 +160,7 @@ const IntroBox = () => {
             src={introImg3}
           />
         </div>
+        {/* Description */}
         <div className="w-full md:w-1/2 p-4 bg-white text-black text-center">
           <div ref={thridrefdiv}>
             <b>Kontakt Roskilde Gymnastikforening</b>
