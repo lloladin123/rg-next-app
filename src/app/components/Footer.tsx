@@ -15,7 +15,7 @@ const Footer = () => {
     <div className="footer">
       <div className="flex flex-col w-full md:flex-row p-8">
         <div className="md:w-1/2 w-full flex flex-col sm:flex-row justify-between sm:justify-around">
-          {/* Box 1 */}
+          {/* Contacts */}
           <div className="p-4 flex flex-col">
             <div className="relative">
               <h1 className="font-bold relative ml-2">Kontakt</h1>
@@ -34,7 +34,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Box 2 */}
+          {/* Links */}
           <div className="p-4 flex flex-col">
             <div className="relative">
               <h1 className="font-bold relative ml-2">Links</h1>
@@ -55,7 +55,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="md:w-1/2 w-full">
-          {/* Box 3 */}
+          {/* Google maps */}
           <div
             className="md:w-full p-4 flex"
             style={{ position: "relative", zIndex: 0 }}
