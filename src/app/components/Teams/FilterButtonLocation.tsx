@@ -4,20 +4,20 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 
 const FilterButtonLocation: React.FC = () => {
   const menuItems = [
-    { name: "Hedegårdenes Skole (Hallen)" },
-    { name: "Hedegårdenes Skole (Musiklokalet)" },
-    { name: "Hedegårdenes Skole (Pigesalen)" },
-    { name: "Idrættens hus (Rytmesal 2)" },
-    { name: "Kildegårdshallen (Hallen)" },
-    { name: "Klostermarksskolen (Festsalen)" },
-    { name: "Roskilde Kongres- og Idrætscenter - Hal B" },
-    { name: "Sct. Jørgens Skole - Festsalen (Festsalen)" },
-    { name: "Østervangsskolen (Hallen)" },
-    { name: "Idrættens hus (Rytmesal 1)" },
-    { name: "Idrættens hus (Springhal)" },
-    { name: "Idrættens hus (Trampolinhal)" },
-    { name: "Idrættens Hus (Bevægelsessal - Stuen)" },
-    { name: "Hedegårdenes Skole (Skolegården)" },
+    { name: "Hedegårdenes Skole (Hallen)", checked: false },
+    { name: "Hedegårdenes Skole (Musiklokalet)", checked: false },
+    { name: "Hedegårdenes Skole (Pigesalen)", checked: false },
+    { name: "Idrættens hus (Rytmesal 2)", checked: false },
+    { name: "Kildegårdshallen (Hallen)", checked: false },
+    { name: "Klostermarksskolen (Festsalen)", checked: false },
+    { name: "Roskilde Kongres- og Idrætscenter - Hal B", checked: false },
+    { name: "Sct. Jørgens Skole - Festsalen (Festsalen)", checked: false },
+    { name: "Østervangsskolen (Hallen)", checked: false },
+    { name: "Idrættens hus (Rytmesal 1)", checked: false },
+    { name: "Idrættens hus (Springhal)", checked: false },
+    { name: "Idrættens hus (Trampolinhal)", checked: false },
+    { name: "Idrættens Hus (Bevægelsessal - Stuen)", checked: false },
+    { name: "Hedegårdenes Skole (Skolegården)", checked: false },
   ];
 
   return (

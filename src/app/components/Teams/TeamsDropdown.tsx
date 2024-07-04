@@ -54,6 +54,7 @@ const TeamsDropDown: React.FC<TeamsDropDownProps> = ({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
+      {/* Dropdown button */}
       <button
         className="flex flex-row items-center p-2"
         onClick={toggleDropdown}
@@ -65,6 +66,7 @@ const TeamsDropDown: React.FC<TeamsDropDownProps> = ({
           <IoIosArrowDown className="ml-1" />
         )}
       </button>
+      {/* Dropdown items */}
       {!showTimeFilter && (
         <div>
           {isOpen && (

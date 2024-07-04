@@ -6,14 +6,14 @@ import { FaListUl } from "react-icons/fa";
 const FilterButtonTeamGroups: React.FC = () => {
   // Example menu items for team group dropdown
   const menuItems = [
-    { name: "Motionshold (11)" },
-    { name: "Børnehold (5)" },
-    { name: "Springhold (10)" },
-    { name: "Rytmehold (3)" },
-    { name: "Sports Acro (3)" },
-    { name: "Unicykling (2)" },
-    { name: "Trampolin (1)" },
-    { name: "Akroyoga (1)" },
+    { name: "Motionshold (11)", checked: false },
+    { name: "Børnehold (5)", checked: false },
+    { name: "Springhold (10)", checked: false },
+    { name: "Rytmehold (3)", checked: false },
+    { name: "Sports Acro (3)", checked: false },
+    { name: "Unicykling (2)", checked: false },
+    { name: "Trampolin (1)", checked: false },
+    { name: "Akroyoga (1)", checked: false },
   ];
 
   return (

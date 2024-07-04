@@ -4,13 +4,13 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 
 const FilterButtonTime: React.FC = () => {
   const menuItems = [
-    { name: "Mandag" },
-    { name: "Tirsdag" },
-    { name: "Onsdag" },
-    { name: "Torsdag" },
-    { name: "Fredag" },
-    { name: "Lørdag" },
-    { name: "Søndag" },
+    { name: "Mandag", checked: false },
+    { name: "Tirsdag", checked: false },
+    { name: "Onsdag", checked: false },
+    { name: "Torsdag", checked: false },
+    { name: "Fredag", checked: false },
+    { name: "Lørdag", checked: false },
+    { name: "Søndag", checked: false },
   ];
 
   return (

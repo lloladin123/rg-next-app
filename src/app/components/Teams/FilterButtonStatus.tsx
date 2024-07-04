@@ -3,9 +3,9 @@ import TeamsDropdown from "@Teams/TeamsDropdown";
 import { FaUsers } from "react-icons/fa";
 const FilterButtonStatus: React.FC = () => {
   const menuItems = [
-    { name: "Ledig" },
-    { name: "Venteliste" },
-    { name: "Optaget" },
+    { name: "Ledig", checked: false },
+    { name: "Venteliste", checked: false },
+    { name: "Optaget", checked: false },
   ];
 
   return (
