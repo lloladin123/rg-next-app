@@ -94,7 +94,7 @@ const TeamsCardBox: React.FC<TeamsCardBoxProps> = ({
               {/* Location */}
               <div className="flex flex-row space-x-1 p-1">
                 <div className="text-rg-green">
-                  <FaMapMarkerAlt className="" />
+                  <FaMapMarkerAlt className="mt-1" />
                 </div>
                 <div className="flex flex-col">
                   <p>{location}</p>
