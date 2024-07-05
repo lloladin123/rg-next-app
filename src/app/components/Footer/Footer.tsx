@@ -1,5 +1,4 @@
 import React from "react";
-import FacebookFooterIcon from "@Icons/FacebookFooterIcon";
 import dkLogo from "@images/dk_logo.png";
 import mastercardLogo from "@images/mastercard_logo.png";
 import visaElectron from "@images/visa_electron.jpg";
@@ -7,8 +6,8 @@ import visa from "@images/visa_logo.jpg";
 import Link from "next/link";
 import GoogleMapsComponent from "@integrations/GoogleMapsComponent";
 import Image from "next/image";
-import InstagramFooterIcon from "@Icons/InstagramFooterIcon";
 import "@styles/Footer.css";
+import FooterContact from "./FooterContact";
 
 const Footer = () => {
   return (
@@ -17,21 +16,7 @@ const Footer = () => {
         <div className="md:w-1/2 w-full flex flex-col sm:flex-row justify-between sm:justify-around">
           {/* Contacts */}
           <div className="p-4 flex flex-col">
-            <div className="relative">
-              <h1 className="font-bold relative ml-2">Kontakt</h1>
-              <span className="absolute inset-y-0 left-0 w-0.5 bg-rg-green"></span>
-            </div>
-            <div className="mt-3 text-sm">
-              <p>Roskilde Gymnastikforening</p>
-              <p>Kildegården 1, 4000 Roskilde</p>
-              <p>Tlf: 52241924</p>
-              <p>E-mail: kontakt@roskildegf.dk</p>
-              <p>CVR: 22583514</p>
-            </div>
-            <div className="mt-4 flex flex-row space-x-2 items-center">
-              <FacebookFooterIcon />
-              <InstagramFooterIcon />
-            </div>
+            <FooterContact />
           </div>
 
           {/* Links */}

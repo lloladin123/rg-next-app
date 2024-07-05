@@ -28,7 +28,8 @@
       "@NavBar/*": ["./src/app/components/NavBar/*"],
       "@Index/*": ["./src/app/components/Index/*"],
       "@Teams/*": ["./src/app/components/Teams/*"],
-      "@Team/*": ["./src/app/components/Team/*"]
+      "@Team/*": ["./src/app/components/Team/*"],
+      "@store/*": ["./src/app/store/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
