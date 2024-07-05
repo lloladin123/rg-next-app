@@ -1,10 +1,19 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaArrowLeft } from "react-icons/fa";
 import GalleryImage1 from "@images/RGsOpvisningImage1.png";
 import RgShow2023 from "@images/Indmarch2023.jpg";
 import GalleryImage from "../components/GalleryPage/GalleryImage";
+
+const GalleryImages: StaticImageData[] = [
+  RgShow2023,
+  RgShow2023,
+  RgShow2023,
+  RgShow2023,
+  RgShow2023,
+  RgShow2023,
+];
 
 const GalleryPage = () => {
   return (
@@ -22,12 +31,9 @@ const GalleryPage = () => {
 
         <div className="flex flex-col items-center justify-center">
           <div className="grid grid-cols-4 gap-2">
-            <GalleryImage image={RgShow2023} />
-            <GalleryImage image={RgShow2023} />
-            <GalleryImage image={RgShow2023} />
-            <GalleryImage image={RgShow2023} />
-            <GalleryImage image={RgShow2023} />
-            <GalleryImage image={RgShow2023} />
+            {GalleryImages.map((image, index) => (
+              <GalleryImage key={index} image={image} />
+            ))}
           </div>
         </div>
       </div>
