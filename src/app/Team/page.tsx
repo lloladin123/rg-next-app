@@ -1,9 +1,13 @@
+"use client";
 import React from "react";
 import TeamPage from "../components/Team/TeamPage";
-import Alexander from "@images/Alexander.jpg";
-import Kim from "@images/Kim.jpg";
+import InstructorInformationStore from "@store/InstructorInformationStore";
+import { InstructorInfo as instructorInfoType } from "../store/types";
 
 const Team = () => {
+  const instructorInfo: instructorInfoType[] = InstructorInformationStore(
+    (state) => state.instructorInfo
+  );
   return (
     <TeamPage
       title="(030) Springmusene (7-10 år)"
@@ -11,11 +15,10 @@ const Team = () => {
       price="2.150,00 Dkk"
       dateFromTo="02/09/2024 - 16/06-2025"
       day="Mandag 16:00-17:45"
-      instructors={[
-        { name: "Alexander Thøgersen", isHelper: false, image: Alexander },
-        { name: "Kim Lauer", isHelper: false, image: Kim },
-        { name: "Frida Mandrup", isHelper: true },
-      ]}
+      instructors={instructorInfo.map((info) => ({
+        name: info.name,
+        image: info.image,
+      }))}
       description={[
         "Holdet er for både piger og drenge i alderen 7-10 år. Der er plads til alle - både begyndere og øvede.",
         "Vi ønsker at have fokus på et stort fællesskab med plads til alle og det er vigtigt for os, at de unge får en forståelse af at være en del af et hold og bare har det sjovt.",

@@ -2,6 +2,8 @@ import React, { useEffect, useRef, MutableRefObject } from "react";
 import introImg1 from "@images/introImg1.jpg";
 import introImg2 from "@images/introImg2.jpg";
 import introImg3 from "@images/introImg3.jpg";
+import useContactInformationStore from "@/app/store/ContactInformationStore";
+import { ContactInfo, ContactInfo as contactInfoType } from "@store/types";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -14,6 +16,9 @@ const IntroBox = () => {
   const thridrefdiv: MutableRefObject<HTMLDivElement | null> = useRef(null);
   const thirdImage: MutableRefObject<HTMLDivElement | null> = useRef(null);
 
+  const contactInfo: ContactInfo = useContactInformationStore(
+    (state) => state.contactInfo
+  );
   useEffect(() => {
     const adjustImageHeight = () => {
       if (firstrefdiv.current && firstImage.current) {
@@ -112,12 +117,12 @@ const IntroBox = () => {
               Ønsker du selv at være med på det fedeste instruktørteam med godt
               sammenhold, instruktør-events og uddannelse inden for det, du
               underviser i? Hør mere om mulighederne ved at kontakte kontoret på
-              mail:{" "}
+              mail:
               <Link
                 className="text-rg-green hover:opacity-80 hover:text-green-900"
-                href="mailto:kontakt@roskildegf.dk"
+                href={`mailto:${contactInfo.email}`}
               >
-                kontakt@roskildegf.dk
+                {contactInfo.email}
               </Link>
             </p>
             <p className="mt-4">
@@ -176,9 +181,9 @@ const IntroBox = () => {
               kontakt@roskildegf.dk eller på{" "}
               <Link
                 className="text-rg-green hover:opacity-80 hover:text-green-900"
-                href="tel:52 24 19 24"
+                href={`tel:${contactInfo.phone}`}
               >
-                52 24 19 24
+                {contactInfo.phone}
               </Link>
             </p>
           </div>

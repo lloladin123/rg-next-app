@@ -6,7 +6,7 @@ import EmptyInstructor from "@images/EmptyInstructor.png";
 interface InstructorBoxProps {
   name: string;
   description: string;
-  image?: StaticImageData;
+  image?: string;
 }
 
 const InstructorBox: React.FC<InstructorBoxProps> = ({

@@ -1,7 +1,13 @@
+"use client";
 import Link from "next/link";
 import React from "react";
+import useContactInformationStore from "@store/ContactInformationStore";
+import { ContactInfo as ContactInfoType } from "@store/types";
 
 const ContactPersonal = () => {
+  const contactInfo: ContactInfoType = useContactInformationStore(
+    (state) => state.contactInfo
+  );
   return (
     <div className="flex flex-col w-10/12 items-center py-8 mx-auto justify-center">
       <h1 className="text-2xl">Kontaktpersoner</h1>
@@ -13,16 +19,16 @@ const ContactPersonal = () => {
             Kontakt Roskilde Gymnastikforening på tlf.:{" "}
             <Link
               className="text-rg-green hover:text-link-hover duration-300 ease-in-out"
-              href={"tel:52 24 19 24"}
+              href={`tel:${contactInfo.phone}`}
             >
-              52 24 19 24
+              {contactInfo.phone}
             </Link>
             eller på mail:{" "}
             <Link
               className="text-rg-green hover:text-link-hover duration-300 ease-in-out"
-              href="mailto:kontakt@roskildegf.dk"
+              href={`mailto:${contactInfo.email}`}
             >
-              kontakt@roskildegf.dk
+              {contactInfo.email}
             </Link>
           </p>
 
@@ -35,9 +41,9 @@ const ContactPersonal = () => {
             <Link
               className="text-rg-green hover:text-link-hover duration-300 ease-in-out"
               target="blank"
-              href="https://www.google.com/maps/place/Roskilde+Gymnastikforening/@55.6378524,12.0676391,17z/data=!3m1!4b1!4m6!3m5!1s0x465261947b230723:0x891f96a54260a375!8m2!3d55.6378494!4d12.070214!16s%2Fg%2F11b5pjj__j?entry=ttu"
+              href={`https://www.google.com/maps/search/?api=1&query=Roskilde+Gymnastikforening`}
             >
-              Kildegården 1, 4000 Roskilde
+              {contactInfo.address}
             </Link>{" "}
             er åbent for personlighenvendelse:
           </p>

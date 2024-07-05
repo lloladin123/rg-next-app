@@ -2,11 +2,11 @@
 import React from "react";
 import FacebookFooterIcon from "@Icons/FacebookFooterIcon";
 import InstagramFooterIcon from "@Icons/InstagramFooterIcon";
-import useContactStore from "@store/ContactInformationStore";
+import ContactInformationStore from "@store/ContactInformationStore";
 import { ContactInfo as ContactInfoType } from "@store/types";
 
 const FooterContact = () => {
-  const contactInfo: ContactInfoType = useContactStore(
+  const contactInfo: ContactInfoType = ContactInformationStore(
     (state) => state.contactInfo
   );
   return (

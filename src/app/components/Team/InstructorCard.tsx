@@ -6,14 +6,10 @@ import EmptyInstructor from "@images/EmptyInstructor.png";
 interface InstructorCardProps {
   name: string;
   isHelper?: boolean;
-  image?: StaticImageData;
+  image?: string;
 }
 
-const InstructorCard: React.FC<InstructorCardProps> = ({
-  name,
-  isHelper = false,
-  image,
-}) => {
+const InstructorCard: React.FC<InstructorCardProps> = ({ name, image }) => {
   return (
     <div className="flex flex-row space-x-2 border shadow-xl mb-2 rounded-xl overflow-hidden w-full lg:w-1/4">
       <div className="relative w-full flex flex-col">
@@ -23,7 +19,7 @@ const InstructorCard: React.FC<InstructorCardProps> = ({
           style={{ height: "300px" }}
         >
           <Image
-            src={image ? image.src : EmptyInstructor}
+            src={image ? image : EmptyInstructor}
             alt={name}
             layout="fill"
             objectFit="cover"
@@ -33,7 +29,7 @@ const InstructorCard: React.FC<InstructorCardProps> = ({
         {/* Name and title */}
         <div className="p-4 mt-4">
           <p>{name}</p>
-          {isHelper ? <p>HjælpeInstruktør</p> : <p>Instruktør</p>}
+          <p>Instruktør</p>
         </div>
       </div>
     </div>

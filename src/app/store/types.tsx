@@ -10,3 +10,14 @@ export interface ContactStore {
   contactInfo: ContactInfo;
   setContactInfo: (newInfo: ContactInfo) => void;
 }
+
+export interface InstructorInfo {
+  name: string;
+  description: string;
+  image: string;
+}
+
+export interface InstructorStore {
+  instructorInfo: InstructorInfo[];
+  setInstructorInfo: (newInfo: InstructorInfo[]) => void;
+}

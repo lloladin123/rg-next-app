@@ -1,9 +1,14 @@
+"use client";
 import React from "react";
-import Alexander from "@images/Alexander.jpg";
 import CriteriaButtons from "../components/Contacts/CriteriaButtons";
 import InstructorBox from "../components/Contacts/InstructorBox";
+import InstructorInformationStore from "@store/InstructorInformationStore";
+import { InstructorInfo as instructorInfoType } from "../store/types";
 
 const Contacts = () => {
+  const instructorInfo: instructorInfoType[] = InstructorInformationStore(
+    (state) => state.instructorInfo
+  );
   return (
     <div className="flex flex-col w-full lg:w-5/6 mx-auto items-center justify-center">
       {/* Criteria buttons */}
@@ -14,19 +19,13 @@ const Contacts = () => {
       </div>
       {/* Instructor collection */}
       <div className="flex w-full flex-col space-y-12">
-        <InstructorBox
-          name="Alexander Thøgersen"
-          description="Jeg blev inviteret ned og hjælpe af en af mine venner, i sæsonen 2018/19, på et par hold der"
-          image={Alexander}
-        />
-        <InstructorBox
-          name="Alexander Thøgersen"
-          description="Jeg blev inviteret ned og hjælpe af en af mine venner, i sæsonen 2018/19, på et par hold der"
-        />
-        <InstructorBox
-          name="Alexander Thøgersen"
-          description="Jeg blev inviteret ned og hjælpe af en af mine venner, i sæsonen 2018/19, på et par hold der"
-        />
+        {instructorInfo.map((instructor, index) => (
+          <InstructorBox
+            name={instructor.name}
+            description={instructor.description}
+            image={instructor.image}
+          />
+        ))}
       </div>
     </div>
   );

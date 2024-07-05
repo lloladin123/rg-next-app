@@ -21,7 +21,7 @@ interface TeamPageProps {
   price: string;
   dateFromTo: string;
   day: string;
-  instructors: { name: string; isHelper?: boolean; image?: StaticImageData }[];
+  instructors: { name: string; image?: string }[];
   description: string[];
 }
 
@@ -192,7 +192,6 @@ const TeamPage: React.FC<TeamPageProps> = ({
               <InstructorCard
                 key={index}
                 name={instructor.name}
-                isHelper={instructor.isHelper}
                 image={instructor.image}
               />
             ))}
