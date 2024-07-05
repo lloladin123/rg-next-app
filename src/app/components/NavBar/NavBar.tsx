@@ -139,7 +139,7 @@ const NavBar = () => {
                   />,
                   <NavBarDropdownItem
                     key="vedtægter"
-                    href="/"
+                    href="/Articles"
                     text={"Vedtægter".toUpperCase()}
                   />,
                   <NavBarDropdownItem
