@@ -176,7 +176,10 @@ const NavBar = () => {
             </li>
             {/* Roskilde Festival */}
             <li>
-              <NavBarLink href="/" text={"Roskilde Festival".toUpperCase()} />
+              <NavBarLink
+                href="/RoskildeFestival"
+                text={"Roskilde Festival".toUpperCase()}
+              />
             </li>
             {/* Create user */}
             <li>
