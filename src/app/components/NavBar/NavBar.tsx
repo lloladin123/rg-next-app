@@ -134,7 +134,7 @@ const NavBar = () => {
                 items={[
                   <NavBarDropdownItem
                     key="ferier"
-                    href="/"
+                    href="/VacationDays"
                     text={"Ferier".toUpperCase()}
                   />,
                   <NavBarDropdownItem
