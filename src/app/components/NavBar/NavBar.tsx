@@ -154,7 +154,7 @@ const NavBar = () => {
                   />,
                   <NavBarDropdownItem
                     key="omRG"
-                    href="/"
+                    href="/AboutRG"
                     text={"Om Roskilde Gymnastikforening".toUpperCase()}
                   />,
                 ]}
