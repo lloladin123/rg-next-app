@@ -148,9 +148,9 @@ const NavBar = () => {
                     text={"Referater & Årsrapporter".toUpperCase()}
                   />,
                   <NavBarDropdownItem
-                    key="vedtægter"
-                    href="/"
-                    text={"Vedtægter".toUpperCase()}
+                    key="shop"
+                    href="/Shop"
+                    text={"Shop".toUpperCase()}
                   />,
                   <NavBarDropdownItem
                     key="omRG"
