@@ -22,6 +22,7 @@ interface TeamPageProps {
   dateFromTo: string;
   day: string;
   instructors: { name: string; image?: string }[];
+  helpers: { name: string; image?: string }[];
   description: string[];
 }
 
@@ -32,6 +33,7 @@ const TeamPage: React.FC<TeamPageProps> = ({
   dateFromTo,
   day,
   instructors,
+  helpers,
   description,
 }) => {
   return (
@@ -116,25 +118,19 @@ const TeamPage: React.FC<TeamPageProps> = ({
                       <p>Instruktører</p>
                       {instructors.map((instructor, index) => (
                         <div key={index}>
-                          <p className="font-extralight">
-                            {instructor.isHelper == false
-                              ? instructor.name
-                              : ""}
-                          </p>
+                          <p className="font-extralight"> {instructor.name}</p>
                         </div>
                       ))}
                     </div>
                   </div>
-                  {/* Helpers*/}
+                  {/* Helpers */}
                   <div className="flex flex-row space-x-2">
                     <FaUser className="text-rg-green mt-1" />
                     <div className="flex flex-col">
-                      <p>HjælpeInstruktører</p>
-                      {instructors.map((instructor, index) => (
+                      <p>Hjælperer</p>
+                      {helpers.map((helper, index) => (
                         <div key={index}>
-                          <p className="font-extralight">
-                            {instructor.isHelper ? instructor.name : ""}
-                          </p>
+                          <p className="font-extralight"> {helper.name}</p>
                         </div>
                       ))}
                     </div>
@@ -188,11 +184,21 @@ const TeamPage: React.FC<TeamPageProps> = ({
         {/* Instructor cards */}
         <div className="flex flex-col mt-16 mb-16">
           <div className="flex flex-col lg:flex-row space-x-0 lg:space-x-5">
+            {/* Instructor */}
             {instructors.map((instructor, index) => (
               <InstructorCard
                 key={index}
                 name={instructor.name}
                 image={instructor.image}
+              />
+            ))}
+            {/* Helpers */}
+            {helpers.map((helper, index) => (
+              <InstructorCard
+                key={index}
+                name={helper.name}
+                isHelper
+                image={helper.image}
               />
             ))}
           </div>

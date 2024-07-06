@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { StaticImageData } from "next/image";
 import React from "react";
-import EmptyInstructor from "@images/EmptyInstructor.png";
+import EmptyInstructor from "../../../images/EmptyContact.png";
 
 interface InstructorCardProps {
   name: string;
@@ -9,7 +9,11 @@ interface InstructorCardProps {
   image?: string;
 }
 
-const InstructorCard: React.FC<InstructorCardProps> = ({ name, image }) => {
+const InstructorCard: React.FC<InstructorCardProps> = ({
+  name,
+  image,
+  isHelper,
+}) => {
   return (
     <div className="flex flex-row space-x-2 border shadow-xl mb-2 rounded-xl overflow-hidden w-full lg:w-1/4">
       <div className="relative w-full flex flex-col">
@@ -29,7 +33,7 @@ const InstructorCard: React.FC<InstructorCardProps> = ({ name, image }) => {
         {/* Name and title */}
         <div className="p-4 mt-4">
           <p>{name}</p>
-          <p>Instruktør</p>
+          {isHelper && <p>Instruktør</p>}
         </div>
       </div>
     </div>

@@ -3,10 +3,15 @@ import React from "react";
 import TeamPage from "../components/Team/TeamPage";
 import InstructorInformationStore from "@store/InstructorInformationStore";
 import { InstructorInfo as instructorInfoType } from "../store/types";
+import HelperInformationStore from "@store/HelperInformationStore";
+import { HelperInfo as HelperInfoType } from "../store/types";
 
 const Team = () => {
   const instructorInfo: instructorInfoType[] = InstructorInformationStore(
     (state) => state.instructorInfo
+  );
+  const helperInfo: HelperInfoType[] = HelperInformationStore(
+    (state) => state.helperInfo
   );
   return (
     <TeamPage
@@ -16,6 +21,10 @@ const Team = () => {
       dateFromTo="02/09/2024 - 16/06-2025"
       day="Mandag 16:00-17:45"
       instructors={instructorInfo.map((info) => ({
+        name: info.name,
+        image: info.image,
+      }))}
+      helpers={helperInfo.map((info) => ({
         name: info.name,
         image: info.image,
       }))}
