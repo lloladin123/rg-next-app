@@ -54,3 +54,14 @@ export interface BoardSubstituteStore {
   boardSubstituteInfo: BoardSubstituteInfo[];
   setBoardSubstituteInfo: (newInfo: BoardSubstituteInfo[]) => void;
 }
+
+export interface ContactPersonalInfo {
+  name: string;
+  description: string;
+  image: string;
+}
+
+export interface ContactPersonalStore {
+  contactPersonalInfo: ContactPersonalInfo[];
+  setContactPersonalInfo: (newInfo: ContactPersonalInfo[]) => void;
+}

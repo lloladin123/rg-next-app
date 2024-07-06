@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import CriteriaButtons from "../components/Contacts/CriteriaButtons";
-import InstructorBox from "@components/Contacts/ContactBox";
 import InstructorInformationStore from "@store/InstructorInformationStore";
 import { InstructorInfo as InstructorInfoType } from "../store/types";
 import HelperInformationStore from "@store/HelperInformationStore";
@@ -9,7 +8,9 @@ import { HelperInfo as HelperInfoType } from "../store/types";
 import BoardInformationStore from "@store/BoardInformationStore";
 import { BoardInfo as BoardInfoType } from "../store/types";
 import BoardSubstituteInformationStore from "@store/BoardSubstituteInformationStore";
-import { BoardInfo as BoardSubstituteInfoType } from "../store/types";
+import { BoardSubstituteInfo as BoardSubstituteInfoType } from "../store/types";
+import ContactPersonalInformationStore from "@store/ContactPersonalInformationStore";
+import { ContactPersonalInfo as ContactPersonalInfoType } from "../store/types";
 import ContactBox from "@components/Contacts/ContactBox";
 
 interface ContactsProps {
@@ -28,12 +29,15 @@ const Contacts: React.FC<ContactsProps> = ({ title }) => {
   );
   const boardSubstituteInfo: BoardSubstituteInfoType[] =
     BoardSubstituteInformationStore((state) => state.boardSubstituteInfo);
+  const contactPersonalInfo: ContactPersonalInfoType[] =
+    ContactPersonalInformationStore((state) => state.contactPersonalInfo);
 
   const [toggleState, setToggleState] = useState({
     instructorsVisible: true,
     helpersVisible: false,
     boardVisible: false,
     boardSubstituteVisible: false,
+    contactPersonalVisible: false,
   });
 
   const handleToggle = (toggleKey: string) => {
@@ -43,6 +47,7 @@ const Contacts: React.FC<ContactsProps> = ({ title }) => {
       helpersVisible: toggleKey === "helpersVisible",
       boardVisible: toggleKey === "boardVisible",
       boardSubstituteVisible: toggleKey === "boardSubstituteVisible",
+      contactPersonalVisible: toggleKey === "contactPersonalVisible",
     });
   };
 
@@ -51,6 +56,7 @@ const Contacts: React.FC<ContactsProps> = ({ title }) => {
     { key: "helpersVisible", label: "HjælpeInstruktør" },
     { key: "boardVisible", label: "Bestyrelse" },
     { key: "boardSubstituteVisible", label: "Suppleanter" },
+    { key: "contactPersonalVisible", label: "Kontakter" },
   ];
 
   return (
@@ -76,6 +82,9 @@ const Contacts: React.FC<ContactsProps> = ({ title }) => {
         {toggleState.boardVisible && <ContactBox contacts={boardInfo} />}
         {toggleState.boardSubstituteVisible && (
           <ContactBox contacts={boardSubstituteInfo} />
+        )}
+        {toggleState.contactPersonalVisible && (
+          <ContactBox contacts={contactPersonalInfo} />
         )}
       </div>
     </div>
