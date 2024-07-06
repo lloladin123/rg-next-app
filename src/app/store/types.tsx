@@ -32,3 +32,14 @@ export interface HelperStore {
   helperInfo: HelperInfo[];
   setHelperInfo: (newInfo: HelperInfo[]) => void;
 }
+
+export interface BoardInfo {
+  name: string;
+  description: string;
+  image: string;
+}
+
+export interface BoardStore {
+  boardInfo: BoardInfo[];
+  setBoardInfo: (newInfo: BoardInfo[]) => void;
+}
