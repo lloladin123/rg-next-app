@@ -22,7 +22,12 @@ const CriteriaButtons: React.FC<CriteriaButtonsProps> = ({
           }`}
           onClick={() => handleToggle(toggle.key)}
         >
-          {activeToggle === toggle.key && <FaCheck className="mt-1 mr-1" />}
+          <FaCheck
+            className="mt-1 mr-1"
+            style={{
+              opacity: activeToggle === toggle.key ? 1 : 0,
+            }}
+          />
           {toggle.label}
         </button>
       ))}

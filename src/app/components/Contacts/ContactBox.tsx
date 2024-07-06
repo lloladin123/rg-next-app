@@ -33,7 +33,7 @@ const ContactBox: React.FC<ContactListProps> = ({ contacts }) => {
           </div>
           {/*Contact description */}
           <div className="flex flex-col items-center md:items-start md:w-9/12">
-            <h2>{contact.name}</h2>
+            <h2 className="text-3xl">{contact.name}</h2>
             <p className="text-3xl font-bold">{}</p>
             <p className="text-sm">{contact.description}</p>
             {/* More information button */}
