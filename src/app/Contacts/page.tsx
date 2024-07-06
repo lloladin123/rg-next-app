@@ -8,8 +8,9 @@ import HelperInformationStore from "@store/HelperInformationStore";
 import { HelperInfo as HelperInfoType } from "../store/types";
 import BoardInformationStore from "@store/BoardInformationStore";
 import { BoardInfo as BoardInfoType } from "../store/types";
-import HelperBox from "../components/Contacts/HelperBox copy";
-import BoardBox from "../components/Contacts/BoardBox";
+import BoardSubstituteInformationStore from "@store/BoardSubstituteInformationStore";
+import { BoardInfo as BoardSubstituteInfoType } from "../store/types";
+import ContactBox from "@components/Contacts/ContactBox";
 
 interface ContactsProps {
   title: string;
@@ -25,11 +26,14 @@ const Contacts: React.FC<ContactsProps> = ({ title }) => {
   const boardInfo: BoardInfoType[] = BoardInformationStore(
     (state) => state.boardInfo
   );
+  const boardSubstituteInfo: BoardSubstituteInfoType[] =
+    BoardSubstituteInformationStore((state) => state.boardSubstituteInfo);
 
   const [toggleState, setToggleState] = useState({
     instructorsVisible: true,
     helpersVisible: false,
     boardVisible: false,
+    boardSubstituteVisible: false,
   });
 
   const handleToggle = (toggleKey: string) => {
@@ -38,6 +42,7 @@ const Contacts: React.FC<ContactsProps> = ({ title }) => {
       instructorsVisible: toggleKey === "instructorsVisible",
       helpersVisible: toggleKey === "helpersVisible",
       boardVisible: toggleKey === "boardVisible",
+      boardSubstituteVisible: toggleKey === "boardSubstituteVisible",
     });
   };
 
@@ -45,6 +50,7 @@ const Contacts: React.FC<ContactsProps> = ({ title }) => {
     { key: "instructorsVisible", label: "Instruktører" },
     { key: "helpersVisible", label: "HjælpeInstruktør" },
     { key: "boardVisible", label: "Bestyrelse" },
+    { key: "boardSubstituteVisible", label: "Suppleanter" },
   ];
 
   return (
@@ -61,35 +67,16 @@ const Contacts: React.FC<ContactsProps> = ({ title }) => {
       <div className="pt-10 border-t w-full flex items-center justify-center mt-4">
         <p className="text-3xl">{title}</p>
       </div>
-      {/* Instructor collection */}
+      {/* Contacts collection */}
       <div className="flex w-full flex-col space-y-12">
-        {toggleState.instructorsVisible &&
-          instructorInfo.map((instructor, index) => (
-            <InstructorBox
-              key={index}
-              name={instructor.name}
-              description={instructor.description}
-              image={instructor.image}
-            />
-          ))}
-        {toggleState.helpersVisible &&
-          helperInfo.map((helper, index) => (
-            <HelperBox
-              key={index}
-              name={helper.name}
-              description={helper.description}
-              image={helper.image}
-            />
-          ))}
-        {toggleState.boardVisible &&
-          boardInfo.map((board, index) => (
-            <BoardBox
-              key={index}
-              name={board.name}
-              description={board.description}
-              image={board.image}
-            />
-          ))}
+        {toggleState.instructorsVisible && (
+          <ContactBox contacts={instructorInfo} />
+        )}
+        {toggleState.helpersVisible && <ContactBox contacts={helperInfo} />}
+        {toggleState.boardVisible && <ContactBox contacts={boardInfo} />}
+        {toggleState.boardSubstituteVisible && (
+          <ContactBox contacts={boardSubstituteInfo} />
+        )}
       </div>
     </div>
   );

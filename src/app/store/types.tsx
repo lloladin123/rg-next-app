@@ -43,3 +43,14 @@ export interface BoardStore {
   boardInfo: BoardInfo[];
   setBoardInfo: (newInfo: BoardInfo[]) => void;
 }
+
+export interface BoardSubstituteInfo {
+  name: string;
+  description: string;
+  image: string;
+}
+
+export interface BoardSubstituteStore {
+  boardSubstituteInfo: BoardSubstituteInfo[];
+  setBoardSubstituteInfo: (newInfo: BoardSubstituteInfo[]) => void;
+}
