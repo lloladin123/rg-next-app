@@ -1,5 +1,5 @@
 import React from "react";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Springmusene from "@images/SpringmuseneHold.jpg";
 import { FaRegCalendarDays } from "react-icons/fa6";
 import { FaRegMoneyBillAlt } from "react-icons/fa";
