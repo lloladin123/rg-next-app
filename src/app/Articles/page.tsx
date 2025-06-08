@@ -147,7 +147,7 @@ const Articles = () => {
       <div>
         {/* Article box */}
         {articles.map((article, index) => (
-          <ArticleBox article={article} />
+          <ArticleBox key={index} article={article} />
         ))}
       </div>
       <div className="text-xs my-16">
