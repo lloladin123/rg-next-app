@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import RgShow2022 from "@images/Afslutning2022.png";
 import RgShow2023 from "@images/Indmarch2023.jpg";
