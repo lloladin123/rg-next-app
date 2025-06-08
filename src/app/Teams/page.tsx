@@ -2,7 +2,7 @@ import React from "react";
 import SearchBar from "@Teams/SearchBar";
 import FilterButton from "@Teams/FilterButtons";
 import TeamsCardBox from "@Teams/TeamsCardBox";
-import SpringMuseneHold from "@images/SpringmuseneHold.jpg";
+import SpringMuseneHold from "@images/Springmusene.jpg";
 import Pagination from "../components/Teams/Pagination";
 
 const Teams = () => {
